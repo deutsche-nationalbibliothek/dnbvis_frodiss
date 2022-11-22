@@ -152,8 +152,10 @@ missing = 786
 if subject == "Übersicht": 
 # --- boxes
     
-    st.info("Ein Klick auf eine Kachel führt zu den Publikationen im neuen Katalog der DNB. Es werden dort zumeist mehr Treffer angezeigt, als im Datenset "
-            " enthalten. Dies liegt zum einen an der Tagesaktualität des Katalogs, zum anderen vor allem an den zur Verfügung stehenden Suchindizes. ") 
+    st.write(" Klicken Sie auf eine farbige Kachel, um sich die hier erfassten Titel dieses Fachgebiets "
+         " im neuen Katalog der DNB anzeigen zu lassen. Da die Katalogdaten im Unterschied zum Datenset immer tagesaktuell sind und andere "
+         " Suchindizes genutzt werden, kommt es bei der Treffermenge zu leichten Abweichungen zwischen der Gesamtzahl der jeweiligen Hochschulschriften "
+         " im Katalog und in der Visualisierung.   ")        
 
     col1, col2, col3 = st.columns(3)
     
