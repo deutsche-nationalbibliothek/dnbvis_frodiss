@@ -55,7 +55,8 @@ with st.sidebar:
 
 st.subheader("Über diese Visualisierung")
 
-st.markdown("Die Anwendung visualisiert ein Datenset der Deutschen Nationalbibliothek. Sie soll einen ersten visuellen Eindruck von den Online-Dissertationen im Bestand der DNB geben, und zusätzlich verdeutlichen, "
+st.markdown('Die Anwendung visualisiert das Datenset "Freie Online-Hochschulschriften" der Deutschen Nationalbibliothek. Sie soll einen ersten visuellen Eindruck '
+            " der Online-Dissertationen im Bestand der DNB geben, und zusätzlich verdeutlichen, "
             " wie auf der Basis vorhandener Katalogdaten mit einfachen Mitteln und verhältnismäßig geringem Aufwand Erkenntnisse über ausgewählte "
             " Publikationstypen, deren Entwicklung, Verbreitung und sprachliche Vielfalt gewonnen und graphisch dargestellt werden können. Mit den "
             " Online-Dissertationen ist ein Anfang gemacht. Eine Fortsetzung mit Bestandsanalysen zu anderen Publikationstypen, Zeiträumen und inhaltlichen " 
@@ -66,7 +67,7 @@ st.markdown("Die Anwendung enthält mehrfach Links auf den Katalog der Deutschen
             "DNB-Katalog angezeigten Trefferanzahl abweichen kann. Grund dafür ist, dass diese Anwendung auf einem Datenabzug eines bestimmten Datums "
             " basiert, während der Katalog der DNB die Sammlung tagesaktuell wiedergibt.") 
 
-st.markdown(" #### Datenbereinigung ")
+st.markdown(" #### Methodik")
           
 st.markdown("Im Datenset enthalten sind derzeit ingesamt 295.756 Datensätze. Von diesen verfügen 295.199 "
             "über einen [Hochschulschriftenvermerk](https://www.dnb.de/DE/Service/Hilfe/HilfeNP/_content/Ablieferung/Monografienn/hochschulschriftenvermerkAblieferung8_akk.html). "
@@ -77,6 +78,13 @@ st.markdown("Im Datenset enthalten sind derzeit ingesamt 295.756 Datensätze. Vo
 st.write("Für die visuelle Darstellung der Daten aus dem Datenset der Deutschen Nationalbibliothek mussten diese bereinigt und angepasst werden. "
          " Diese Arbeiten erfolgten hauptsächlich maschinell, indem bspw. eckige Klammern um Jahreszahlen entfernt oder Eintragungen älterer Sachgruppen "
         " auf die DDC gemappt wurden. Mehr Informationen hierzu finden Sie jeweils unter den einzelnen Visualisierungen.") 
+
+st.write("Das Datenset liegt im MARC21-XML-Format vor, aus dem die für die unterschiedlichen Visualisierungen notwendigen Informationen gefiltert "
+         " und als JSON-Dateien gespeichert wurden. Diese dienen als Basis für die verschiedenen Python-Skripte, auf denen die Visualisierungen basieren. "
+st.write("Die Anwendung wurde mit dem Python-Framework [Streamlit](https://streamlit.io/) geschrieben, die verschiedenen Visualisierungen basieren auf "
+         " [Plotly](https://plotly.com/python/). ")
+st.write("Die für diese Anwendung genutzten Skripte und JSON-Dateien sind auf [Github](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss) verfügbar. "
+         " Alle Skripte und Daten stehen unter CC0 Lizenz und können frei weitergenutzt werden. ")
 
 
 st.markdown(" #### Kontakt") 
