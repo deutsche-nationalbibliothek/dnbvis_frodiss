@@ -8,6 +8,5 @@ numpy
 plotly.express
 geopy
 streamlit_plotly_events
-tweepy
-altair
+
 
