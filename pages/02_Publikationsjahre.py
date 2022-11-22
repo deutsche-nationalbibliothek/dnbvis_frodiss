@@ -54,7 +54,7 @@ dissyears = pd.read_json("data/diss_years.json")
 
 st.subheader("Anzahl der Online-Hochschulschriften im Bestand ab 1990: ")
 
-st.write("Klicken Sie auf die balu unterlegte Anzahl der Dissertationen eines Jahres, um sich die hier erfassten Titel dieses Erscheinungsjahres "
+st.write("Klicken Sie auf die blau unterlegte Anzahl der Dissertationen eines Jahres, um sich die hier erfassten Titel dieses Erscheinungsjahres "
          " im Katalog der DNB anzeigen zu lassen. Da die Katalogdaten im Unterschied zum Datenset immer tagesaktuell sind, kommt es zu Abweichungen "
          " zwischen der Gesamtzahl der Hochschulschriften im Katalog und in der Visualisierung.")
 
