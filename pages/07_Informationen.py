@@ -83,8 +83,9 @@ st.write("Das Datenset liegt im MARC21-XML-Format vor, aus dem die für die unte
          " und als JSON-Dateien gespeichert wurden. Diese dienen als Basis für die verschiedenen Python-Skripte, auf denen die Visualisierungen basieren. ")
 st.write("Die Anwendung wurde mit dem Python-Framework [Streamlit](https://streamlit.io/) geschrieben, die verschiedenen Visualisierungen basieren auf "
          " [Plotly](https://plotly.com/python/). ")
+st.markdown(" #### Lizenz) 
 st.write("Die für diese Anwendung genutzten Skripte und JSON-Dateien sind auf [Github](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss) verfügbar. "
-         " Alle Skripte und Daten stehen unter CC0 Lizenz und können frei weitergenutzt werden. ")
+         " Diese Skripte und Daten stehen unter CC0 Lizenz und können frei weitergenutzt werden. ")
 
 
 st.markdown(" #### Kontakt") 
