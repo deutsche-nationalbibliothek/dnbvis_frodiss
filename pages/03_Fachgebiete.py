@@ -152,7 +152,7 @@ missing = 786
 if subject == "Übersicht": 
 # --- boxes
     
-    st.write(" Klicken Sie auf eine farbige Kachel, um sich die hier erfassten Titel dieses Fachgebiets "
+    st.caption(" Klicken Sie auf eine farbige Kachel, um sich die hier erfassten Titel dieses Fachgebiets "
          " im neuen Katalog der DNB anzeigen zu lassen. Da die Katalogdaten im Unterschied zum Datenset immer tagesaktuell sind und andere "
          " Suchindizes genutzt werden, kommt es bei der Treffermenge zu leichten Abweichungen zwischen der Gesamtzahl der jeweiligen Hochschulschriften "
          " im Katalog und in der Visualisierung.   ")        
