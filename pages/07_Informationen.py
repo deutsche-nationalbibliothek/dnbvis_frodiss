@@ -80,7 +80,7 @@ st.write("Für die visuelle Darstellung der Daten aus dem Datenset der Deutschen
         " auf die DDC gemappt wurden. Mehr Informationen hierzu finden Sie jeweils unter den einzelnen Visualisierungen.") 
 
 st.write("Das Datenset liegt im MARC21-XML-Format vor, aus dem die für die unterschiedlichen Visualisierungen notwendigen Informationen gefiltert "
-         " und als JSON-Dateien gespeichert wurden. Diese dienen als Basis für die verschiedenen Python-Skripte, auf denen die Visualisierungen basieren. "
+         " und als JSON-Dateien gespeichert wurden. Diese dienen als Basis für die verschiedenen Python-Skripte, auf denen die Visualisierungen basieren. ")
 st.write("Die Anwendung wurde mit dem Python-Framework [Streamlit](https://streamlit.io/) geschrieben, die verschiedenen Visualisierungen basieren auf "
          " [Plotly](https://plotly.com/python/). ")
 st.write("Die für diese Anwendung genutzten Skripte und JSON-Dateien sind auf [Github](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss) verfügbar. "
