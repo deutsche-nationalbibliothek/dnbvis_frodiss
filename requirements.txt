@@ -6,8 +6,6 @@ lxml
 nltk
 numpy
 plotly.express
-wordcloud
-h5py
 geopy
 streamlit_plotly_events
 tweepy
