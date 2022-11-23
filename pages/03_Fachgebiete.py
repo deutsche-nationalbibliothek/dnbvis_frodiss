@@ -152,8 +152,6 @@ missing = 786
 if subject == "Übersicht": 
 # --- boxes
     
-      
-
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -163,7 +161,7 @@ if subject == "Übersicht":
         #lnk = '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">'
         i = conv1_pub_000
         
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D0*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D0*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
                         font-size: {fontsize}px; 
                         color: black;
@@ -184,7 +182,7 @@ if subject == "Übersicht":
         ddc_main = "Philosophie und Psychologie"
         i = conv1_pub_100
 
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D1*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D%28100+OR+110+OR+120+OR+130+OR+140+OR+150+OR+160+OR+170+OR+180+OR+190%29&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]});
                         font-size: {fontsize}px; 
                         color: black;
@@ -204,7 +202,7 @@ if subject == "Übersicht":
         ddc_main = "Religion"
         i = conv1_pub_200
 
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D2*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D2*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
                         font-size: {fontsize}px; 
                         color: black;
@@ -227,7 +225,7 @@ if subject == "Übersicht":
         ddc_main = "Sozialwissenschaften"
         i = conv1_pub_300
         
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D3*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D3*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
                         font-size: {fontsize}px; 
                         color: black;
@@ -247,7 +245,7 @@ if subject == "Übersicht":
         ddc_main = "Sprache"
         i = conv1_pub_400
         
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D4*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D4*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
                         font-size: {fontsize}px; 
                         color: black;
@@ -268,7 +266,7 @@ if subject == "Übersicht":
         ddc_main = "Naturwissenschaften und Mathematik"
         i = conv1_pub_500
         
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D5*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D5*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
                         font-size: {fontsize}px; 
                         color: black;
@@ -291,7 +289,7 @@ if subject == "Übersicht":
         ddc_main = "Technik, Medizin, angewandte Wissenschaften"
         i = conv1_pub_600
         
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D6*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D6*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
                         font-size: {fontsize}px;
                         color: black;
@@ -312,7 +310,7 @@ if subject == "Übersicht":
         ddc_main = "Künste und Unterhaltung"
         i = conv1_pub_700
         
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D7*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D7*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]});
                         color: black;
                         font-size: {fontsize}px; 
@@ -332,7 +330,7 @@ if subject == "Übersicht":
         ddc_main = "Literatur"
         i = conv1_pub_800
         
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D8*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D8*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
                         font-size: {fontsize}px; 
                         color: black;
@@ -354,7 +352,7 @@ if subject == "Übersicht":
         ddc_main = "Geschichte und Geografie"
         i = conv1_pub_900
         
-        htmlstr = f"""<a href="https://katalog.dnb.de/DE/list.html?key=cql&t=sgt%3D9*&fD=fmt.hss&fD=sta.oa" target="new" style="text-decoration:none">
+        htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D9*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
                         font-size: {fontsize}px; 
                         color: black;
@@ -389,6 +387,7 @@ if subject == "Übersicht":
                         <span style='font-size: 22px; line-height: 35px;'><b>{i}</b></style></span></p>"""
      
         st.markdown(htmlstr, unsafe_allow_html=True)
+      
         
     st.write(" ")    
     st.caption(" Klicken Sie auf eine farbige Kachel, um sich die hier erfassten Titel dieses Fachgebiets "
