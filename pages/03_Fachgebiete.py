@@ -191,7 +191,7 @@ if subject == "Übersicht":
                         padding-top: 18px; 
                         padding-bottom: 18px; 
                         line-height:20px;'>
-                        {ddc_main}</style><BR>
+                        {ddc_main}<br></style><BR>
                         <span style='font-size: 22px; line-height: 35px;'><b>{i}</b><br></style></span></p></a>"""
 
         st.markdown(htmlstr, unsafe_allow_html=True)
@@ -211,7 +211,7 @@ if subject == "Übersicht":
                         padding-top: 18px; 
                         padding-bottom: 18px; 
                         line-height:20px;'>
-                        {ddc_main}
+                        {ddc_main}<br>
                         </style><BR><span style='font-size: 22px; line-height: 35px;'><b>{i}</b></style></span></p></a>"""
 
         st.markdown(htmlstr, unsafe_allow_html=True)
@@ -234,7 +234,7 @@ if subject == "Übersicht":
                         padding-top: 18px; 
                         padding-bottom: 18px; 
                         line-height:20px;'>
-                        {ddc_main}</style><BR>
+                        {ddc_main}<br></style><BR>
                         <span style='font-size: 22px; line-height: 35px;'><b>{i}</b></style></span></p></a>"""
      
         st.markdown(htmlstr, unsafe_allow_html=True)
@@ -254,7 +254,7 @@ if subject == "Übersicht":
                         padding-top: 18px; 
                         padding-bottom: 18px; 
                         line-height:20px;'>
-                        {ddc_main}</style><BR>
+                        {ddc_main}<br></style><BR>
                         <span style='font-size: 22px; line-height: 35px;'><b>{i}</b></style></span></p></a>"""
      
         st.markdown(htmlstr, unsafe_allow_html=True)
@@ -319,7 +319,7 @@ if subject == "Übersicht":
                         padding-top: 18px; 
                         padding-bottom: 18px; 
                         line-height:20px; '>
-                        {ddc_main}</style><BR>
+                        {ddc_main}<br></style><BR>
                         <span style='font-size: 22px; line-height:35px'><b>{i}</b></style></span></p></a>"""
      
         st.markdown(htmlstr, unsafe_allow_html=True)
@@ -339,7 +339,7 @@ if subject == "Übersicht":
                         padding-top: 18px; 
                         padding-bottom: 18px; 
                         line-height:20px;'>
-                        {ddc_main}</style><BR>
+                        {ddc_main}<br></style><BR>
                         <span style='font-size: 22px; line-height: 35px;'></b>{i}</b></style></span></p></a>"""
      
         st.markdown(htmlstr, unsafe_allow_html=True)
@@ -361,7 +361,7 @@ if subject == "Übersicht":
                         padding-top: 18px; 
                         padding-bottom: 18px; 
                         line-height:20px;'>
-                        {ddc_main}</style><BR>
+                        {ddc_main}<br></style><BR>
                         <span style='font-size: 22px; line-height: 35px;'><b>{i}</b></style></span></p></a>"""
      
         st.markdown(htmlstr, unsafe_allow_html=True)
@@ -383,7 +383,7 @@ if subject == "Übersicht":
                         line-height:20px;
                         border-style: solid;
                         border-width: 1px;'>
-                        {ddc_main}</style><BR>
+                        {ddc_main}<br></style><BR>
                         <span style='font-size: 22px; line-height: 35px;'><b>{i}</b></style></span></p>"""
      
         st.markdown(htmlstr, unsafe_allow_html=True)
