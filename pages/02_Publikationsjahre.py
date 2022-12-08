@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import numpy as np
-from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
