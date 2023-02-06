@@ -9,6 +9,7 @@ import plotly.express as px
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
 st.set_page_config(page_title='DNBVIS_frodiss', page_icon = logo) # , layout = 'wide')
 
+#last update: 06-02-2023
 
 st.markdown(
         """
