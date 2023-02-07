@@ -52,6 +52,14 @@ with st.sidebar:
         st.write("Datensätze im Set: ", complete)     
         st.write("Stand der Daten: 03.11.2022")
         st.write("Zuletzt aktualisiert: 22.11.2022")
+        
+        col1, col2 = st.columns([1,3])
+        github_logo_black = "GitHub_Logo.png"
+        github_logo_white = "GitHub_Logo_white.png"
+        
+        col1.image(github_logo_black)
+        col2.write("DNBVIS_frodiss auf GitHub")
+        
     
     
     
