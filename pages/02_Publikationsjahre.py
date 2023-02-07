@@ -77,9 +77,9 @@ st.plotly_chart(fig2, use_container_width=True)
 st.markdown(" ##### Informationen zu dieser Visualisierung:")
 st.markdown('Das Datenset "Freie Online-Hochschulschriften" enthält Datensätze über alle in der DNB gesammelten Hochschulschriften, die online frei verfügbar sind. '
             "Es enthält dabei auch Datensätze über entsprechende Publikationen, die Jahre nach ihrem Erscheinen digitalisiert worden sind. Das Set enthält daher auch Datensätze "
-            "von Publikationen, die vor dem Beginn der Sammlung digitaler Hochschulschriften veröffentlicht wurden. Da auch Hochschulschriften aus den Jahren vor 1990 "
-            "digitalisiert wurden und entsprechend im Datenset enthalten sind, diese aber einen vergleichsweisen geringen Teil ausmachen, die Übersichtlichkeit der Darstellung "
-            "allerdings bei Ausweitung der Visualisierung auf alle im Set enthaltenen Erscheinungsjahre sehr leidet, wurde die Darstellung der Publikationsjahre auf die Erscheinungsjahre ab 1990 "
+            "von Publikationen, die vor dem Beginn der Sammlung digitaler Hochschulschriften veröffentlicht wurden. "
+            "Digitalisierte Hochschulschriften mit einem Erscheinungsdatum vor 1990 sind daher in sehr geringem Umfang ebenfalls im Set enthalten." 
+            "Für eine möglichst übersichtliche Darstellung der Publikationsjahre wurde diese daher auf die Erscheinungsjahre ab 1990 "
             "beschränkt. Enstprechend liegen dieser Darstellung 294.809 Publikationen zugrunde. ") 
     
 
