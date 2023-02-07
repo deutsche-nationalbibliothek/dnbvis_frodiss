@@ -65,7 +65,7 @@ df["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&que
 update = (len(df["Place"]))
 
     
-fig3 = px.scatter_mapbox(df, lat="lat", lon="lon", hover_name="Place", 
+fig3 = px.scatter_mapbox(df, lat="lat", lon="lon", hover_name="Place", hover_data=['count'],
                         size="count", color="count", color_continuous_scale=px.colors.cyclical.IceFire, zoom=5, height=500)
 fig3.update_layout(mapbox_style="open-street-map", 
                       mapbox=dict(
@@ -78,6 +78,13 @@ fig3.update_layout(mapbox_style="open-street-map",
                         )  
 fig3.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
+
+template = """
+<b>Anzahl:</b> %{customdata[0]}<br>
+<extra></extra>
+"""
+
+fig3.update_traces(hovertemplate = template)
 
 
 selected_points = plotly_events(fig3)
