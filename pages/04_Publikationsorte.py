@@ -80,9 +80,9 @@ fig3.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 
 template = """
-<b><font size = 20>%{customdata[0]}</font></b><br><br>
+<b>%{customdata[0]}</b><br><br>
 Publikationen im Set: <br>
-<b>%{customdata[1]}</b><br>
+<b>%{customdata[1]}</b>
 """
 
 fig3.update_traces(hovertemplate = template)
