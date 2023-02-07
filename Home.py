@@ -37,7 +37,7 @@ st.markdown(
                 padding-top: 125px;
                 height: 400px;
                 }
-           [data-testid=stSidebarNav]:nth-of-type(1) [data-testid=stVerticalBlock]{
+           [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
                  gap: 0rem;
                 }
         </style>
