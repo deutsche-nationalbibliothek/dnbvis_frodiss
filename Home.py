@@ -37,6 +37,9 @@ st.markdown(
                 padding-top: 125px;
                 height: 400px;
                 }
+           [data-testid=stVerticalBlock]:nth-of-type(1) [data-testid=stVerticalBlock]{
+                 gap: 0rem;
+                }
         </style>
         """,
         unsafe_allow_html=True,
