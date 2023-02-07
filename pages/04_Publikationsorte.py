@@ -70,7 +70,7 @@ fig3 = px.scatter_mapbox(df, lat="lat", lon="lon", hover_name="Place",
                          height=500, labels={
                                         "count": "Anzahl",
                                         "lat":"Latitude",
-                                        "long":"Longitude"
+                                        "lon":"Longitude"
                                              }
                         )
 fig3.update_layout(mapbox_style="open-street-map", 
