@@ -66,7 +66,7 @@ df_uni["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true
     
     
 fig4 = px.scatter_mapbox(df_uni, lat="lat", lon="lon", hover_name="Hochschule",
-                        size="count", color="count", color_continuous_scale=px.colors.cyclical.Phase, zoom=5, height=500,
+                        size="count", color="count", color_continuous_scale=px.colors.cyclical.Phase, zoom=5, #height=500,
                         labels={
                                         "count": "Anzahl",
                                         "lat":"Latitude",
@@ -114,7 +114,7 @@ st.markdown("Die Übersicht Universitäten zeigt die Anzahl der im Datenset enth
            "häufig nicht der offizielle Name der jeweiligen Institution angegeben ist, sondern lediglich ein Ortsname sowie Abkürzungen wie bspw. 'Uni.', "
            " 'Hochsch.', etc. Meist lässt sich auf diese Art eine eindeutige Identifizierung vornehmen, eine geringe Fehlerquote ist möglich. "
            " Auch wurden in geringem Umfang Schätzungen aufgrund von Stichproben genutzt: so wurden bspw. die glücklicherweise wenigen Einträge der Form 'Berlin, Uni.' (ohne weitere Spezifikation) der 'Freien Universität Berlin' zugeordnet, "
-           ", da stichprobenartige Untersuchungen ergaben, dass Hochschulschriften der HU Berlin Teile des Namens oder die Abkürzung 'HU' enthielten, "
+           " da stichprobenartige Untersuchungen ergaben, dass Hochschulschriften der HU Berlin Teile des Namens oder die Abkürzung 'HU' enthielten, "
            " während alle überprüften Hochschulschriften mit dem Vermerk 'Berlin, Uni.' der FU Berlin zuzuordnen waren. " )
 st.markdown("Alle Hochschulschriften, die einer Hochschule außerhalb Deutschlands zuzuordnen sind, wurden für diese Übersicht nicht berücksichtigt. "
             "Auch konnten nicht alle Tippfehler im Hochschulschriftenvermerk abgefangen werden, so dass dadurch einzelne Schriften in der Anzeige "
