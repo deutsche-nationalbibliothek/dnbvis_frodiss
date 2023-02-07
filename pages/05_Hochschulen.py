@@ -66,7 +66,13 @@ df_uni["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true
     
     
 fig4 = px.scatter_mapbox(df_uni, lat="lat", lon="lon", hover_name="Hochschule",
-                        size="count", color="count", color_continuous_scale=px.colors.cyclical.Phase, zoom=5, height=500)
+                        size="count", color="count", color_continuous_scale=px.colors.cyclical.Phase, zoom=5, height=500,
+                        labels={
+                                        "count": "Anzahl",
+                                        "lat":"Latitude",
+                                        "lon":"Longitude"
+                                             }
+                        )
 fig4.update_layout(mapbox_style="open-street-map", 
                       mapbox=dict(
                             #accesstoken=mapbox_access_token,
