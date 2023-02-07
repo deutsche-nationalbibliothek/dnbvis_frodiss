@@ -81,7 +81,8 @@ fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 
 template = """
 <b>%{customdata[0]}</b><br><br>
-Publikationen im Set: %{customdata[1]}<br>
+Publikationen im Set: <br>
+<b>%{customdata[1]}</b><br>
 """
 
 fig3.update_traces(hovertemplate = template)
