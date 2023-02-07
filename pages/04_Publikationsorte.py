@@ -61,18 +61,14 @@ st.write("Der Link wird im Anschluss unter der Karte angezeigt. ")
 
 df = pd.read_json("data/geoplaces.json", encoding="utf-8")
 
-#---- TEST
 df["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+df["Place"].astype(str)
 update = (len(df["Place"]))
-#-----TEST
-
 
     
-fig3 = px.scatter_mapbox(df, lat="lat", lon="lon", hover_name="Place",
+fig3 = px.scatter_mapbox(df, lat="lat", lon="lon", hover_name="Place", hovertemplate = "%{label}: <br>Anzahl: %{count}",
                         size="count", color="count", color_continuous_scale=px.colors.cyclical.IceFire, zoom=5, height=500)
 fig3.update_layout(mapbox_style="open-street-map", 
                       mapbox=dict(
-                            #accesstoken=mapbox_access_token,
                             bearing=0,
                             center=dict(
                                     lat=51.10,
@@ -82,8 +78,6 @@ fig3.update_layout(mapbox_style="open-street-map",
                         )  
 fig3.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
-
-#st.plotly_chart(fig3, use_container_width=True)
 
 
 selected_points = plotly_events(fig3)
