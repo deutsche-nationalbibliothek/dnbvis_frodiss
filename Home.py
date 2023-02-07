@@ -55,7 +55,7 @@ with st.sidebar:
         st.write("Datensätze im Set: ", complete)     
         st.write("Stand der Daten: 03.11.2022")
         st.write("Zuletzt aktualisiert: 22.11.2022")
-        st.write(" ")
+        st.markdown('#') 
         
         
         github_logo_black = "GitHub_Logo.png"
