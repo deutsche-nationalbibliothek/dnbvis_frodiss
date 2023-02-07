@@ -61,8 +61,9 @@ with st.sidebar:
         github_logo_black = "GitHub_Logo.png"
         github_logo_white = "GitHub_Logo_white.png"
         
-        st.image(github_logo_black, width=100)
-        st.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
+        with st.container():
+                st.image(github_logo_black, width=100)
+                st.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
         
     
     
