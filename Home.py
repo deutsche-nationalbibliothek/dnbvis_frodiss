@@ -75,7 +75,7 @@ with st.sidebar:
         with st.container():
                 #st.markdown("[![DNBVIS_frodiss auf GitHub](https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png)](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
                 #st.markdown('''<img src="https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png", width=75>''', unsafe_allow_html=True)
-                st.markdown('<img src="https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png", width="75">', unsafe_allow_html=True)
+                st.markdown('<img src="https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png", width=75>', unsafe_allow_html=True)
                 st.image(github_logo_black, width=75)
                 st.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
         
