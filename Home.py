@@ -37,7 +37,7 @@ st.markdown(
                 padding-top: 125px;
                 height: 400px;
                 }
-           .css-j7qwjs{
+           .css-j7qwjs a:link{
                 color: red;
                 }
            [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
