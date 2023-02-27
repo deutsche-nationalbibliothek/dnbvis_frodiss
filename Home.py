@@ -40,6 +40,13 @@ st.markdown(
            [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
                  gap: 0rem;
                 }
+           [data-testid=stSidebar] [data-testid=stImage]{
+                text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                }
         </style>
         """,
         unsafe_allow_html=True,
