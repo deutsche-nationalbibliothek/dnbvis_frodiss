@@ -31,12 +31,14 @@ st.markdown(
                 max-height: 450px;
                 padding-top: 125px;
                 height: 400px;
-                color: red;
                 }
            .css-hied5v{
                 max-height: 450px;
                 padding-top: 125px;
                 height: 400px;
+                }
+           .css-j7qwjs{
+                color: red;
                 }
            [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
                  gap: 0rem;
