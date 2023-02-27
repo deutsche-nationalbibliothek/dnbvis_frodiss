@@ -49,6 +49,7 @@ st.markdown(
                 }
             [data-testid=stSidebar] a:link{
                 text-decoration: none;
+                text-align: center;
                 }
         </style>
         """,
