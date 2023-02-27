@@ -73,7 +73,7 @@ with st.sidebar:
         github_logo_white = "GitHub_Logo_white.png"
         
         with st.container():
-                st.markdown("[![DNBVIS_frodiss auf GitHub](https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png)](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
+                st.markdown("[![DNBVIS_frodiss auf GitHub](https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png, width=75)](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
                 st.image(github_logo_black, width=75)
                 st.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
         
