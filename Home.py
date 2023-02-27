@@ -49,7 +49,6 @@ st.markdown(
                 }
             [data-testid=stSidebar] a:link{
                 text-decoration: none;
-                text-align: center;
                 }
         </style>
         """,
@@ -74,6 +73,7 @@ with st.sidebar:
         github_logo_white = "GitHub_Logo_white.png"
         
         with st.container():
+                st.markdown("[![DNBVIS_frodiss auf GitHub](github_logo_black, width=75)](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
                 st.image(github_logo_black, width=75)
                 st.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
         
