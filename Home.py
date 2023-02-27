@@ -47,7 +47,7 @@ st.markdown(
                 margin-right: auto;
                 width: 100%;
                 }
-            [data-testid=stSidebar]a:link {
+            [data-testid=stSidebar] a:link{
                 text-decoration: none;
                 }
         </style>
