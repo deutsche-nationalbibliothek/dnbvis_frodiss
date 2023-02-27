@@ -19,7 +19,9 @@ st.markdown(
                 background-image: url(https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg);
                 background-repeat: no-repeat;
                 background-position: 25px 25px;
-                color: darkgrey;
+                }
+           [data-testid="stSidebarNav"] a:link{
+                color: red;
                 }
            [data-testid="stSidebarNav"]::before{
                 content: "DNBVIS_frodiss";
