@@ -37,9 +37,6 @@ st.markdown(
                 padding-top: 125px;
                 height: 400px;
                 }
-           .css-j7qwjs span:link{
-                color: red;
-                }
            [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
                  gap: 0rem;
                 }
