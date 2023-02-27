@@ -20,9 +20,6 @@ st.markdown(
                 background-repeat: no-repeat;
                 background-position: 25px 25px;
                 }
-           [data-testid="stSidebarNav"] a:link{
-                color: red;
-                }
            [data-testid="stSidebarNav"]::before{
                 content: "DNBVIS_frodiss";
                 font-size: 25px;
@@ -34,6 +31,7 @@ st.markdown(
                 max-height: 450px;
                 padding-top: 125px;
                 height: 400px;
+                color: red;
                 }
            .css-hied5v{
                 max-height: 450px;
