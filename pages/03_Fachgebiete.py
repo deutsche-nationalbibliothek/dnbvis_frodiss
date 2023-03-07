@@ -608,7 +608,7 @@ elif subject == "500 - Naturwissenschaften und Mathematik":
             
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
-                  height = 750, color_discrete_sequence=px.colors.sequential.Reds)
+                  height = 750, color_discrete_sequence=px.colors.sequential.Hot)
     fig.update_traces(insidetextorientation='radial', texttemplate="%{label}<br>%{percentEntry:.2%}",
                  hovertemplate="<br>".join([
                         "DDC-Sachgruppe: %{label}",
@@ -661,7 +661,7 @@ elif subject == "700 - Künste und Unterhaltung":
             
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
-                  height = 750, color_discrete_sequence=px.colors.sequential.Blugrn)
+                  height = 750, color_discrete_sequence=px.colors.sequential.haline)
     fig.update_traces(insidetextorientation='radial', texttemplate="%{label}<br>%{percentEntry:.2%}",
                  hovertemplate="<br>".join([
                         "DDC-Sachgruppe: %{label}",
@@ -688,7 +688,7 @@ elif subject == "800 - Literatur":
             
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
-                  height = 750, color_discrete_sequence=px.colors.sequential.Sunsetdark)
+                  height = 750, color_discrete_sequence=px.colors.sequential.thermal)
     fig.update_traces(insidetextorientation='radial', texttemplate="%{label}<br>%{percentEntry:.2%}",
                  hovertemplate="<br>".join([
                         "DDC-Sachgruppe: %{label}",
