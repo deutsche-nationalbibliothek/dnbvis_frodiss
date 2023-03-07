@@ -110,6 +110,7 @@ st.plotly_chart(fig_s1, use_container_width=True)
 #selection = a['pointNumber']
 
 st.write('In dieser zweiten Darstellung wird das Verhältnis "Anderer Sprachen" zueinander visualisiert: ')
+st.info('Durch Klicken auf einzelne Sprachen in der Legende können diese aus der Darstellung ausgeschlossen werden.')
 fig_s2 = px.pie(other_lang, values='counts', labels='name', names='name', height=650, color_discrete_sequence=px.colors.diverging.Portland)
 fig_s2.update_traces(textinfo='label+percent', rotation=180, showlegend=True, textposition="inside", hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}")
 st.plotly_chart(fig_s2, use_container_width=False)
