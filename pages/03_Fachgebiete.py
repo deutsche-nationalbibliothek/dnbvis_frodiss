@@ -469,7 +469,7 @@ elif subject == "000 - Allgemeines, Informatik, Informationswissenschaft":
                
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no', 'DDCthird'],
-                  height = 750, color_discrete_sequence=px.colors.sequential.Oranges)
+                  height = 750, color_discrete_sequence=px.colors.sequential.Viridis)
     fig.update_traces(texttemplate="%{label}<br>%{percentEntry:.2%}",
                         insidetextorientation='auto',  
                         hovertemplate="<br>".join([
