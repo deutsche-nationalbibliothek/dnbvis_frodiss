@@ -39,19 +39,51 @@ st.markdown(
                 padding-top: 125px;
                 height: 400px;
                 }
+           [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
+                 gap: 0rem;
+                }
+           [data-testid=stSidebar] [data-testid=stImage]{
+                text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                }
+            [data-testid=stSidebar] a:link{
+                text-decoration: none;
+                color: black
+                }
         </style>
         """,
         unsafe_allow_html=True,
     )
 
 
-testcolor = ['#ff6900', '#fcb900', '#7bdcb5', '#00d084', '#8ed1fc',
-            '#0693e3', '#abb8c3', '#eb144c', '#f78da7', '#9900ef']
+# ---- SIDEBAR ----- 
+complete = 295756
+used = 295199
 
-with st.sidebar:  
-    st.write("Datensätze im Set: ", complete) 
-    st.write("Stand der Daten: 03.11.2022")
-    st.write("Zuletzt aktualisiert: 22.11.2022") 
+with st.sidebar:
+        
+        st.write("Datensätze im Set: ", complete)     
+        st.write("Stand der Daten: 03.11.2022")
+        st.write("Zuletzt aktualisiert: 07.03.2023")
+        st.markdown('#') 
+        st.markdown('#') 
+        
+        
+        github_logo_black = "GitHub_Logo.png"
+        github_logo_white = "GitHub_Logo_white.png"
+        
+        with st.container():
+                column1, column2 = st.columns(2)
+                
+                column1.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
+                column2.markdown('<style>img {width: 75px; display: block; margin-left: auto; margin-right: auto; margin-top: 10px;}</style><a href="https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss", target="new"><img src="https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png"></a>', unsafe_allow_html=True)
+                
+#----------------        
+    
+    
 
 
 st.subheader("Übersicht Hochschulen") 
