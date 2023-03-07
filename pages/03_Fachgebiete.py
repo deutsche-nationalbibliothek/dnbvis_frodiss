@@ -227,7 +227,7 @@ if subject == "Übersicht":
         st.markdown(htmlstr, unsafe_allow_html=True)
         
     with col3:
-        colour = (0,70,196)
+        colour = (0,102,255)
         fontsize = 16
         ddc_main = "Religion"
         i = conv1_pub_200
