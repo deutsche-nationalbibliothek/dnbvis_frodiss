@@ -335,7 +335,7 @@ if subject == "Übersicht":
         
         
     with threecol2: 
-        colour = (122,219,112)
+        colour = (51,204,204)
         fontsize = 16
         ddc_main = "Künste und Unterhaltung"
         i = conv1_pub_700
@@ -355,7 +355,7 @@ if subject == "Übersicht":
         st.markdown(htmlstr, unsafe_allow_html=True)
         
     with threecol3: 
-        colour = (243,161,97)
+        colour = (122,219,112)
         fontsize = 16
         ddc_main = "Literatur"
         i = conv1_pub_800
