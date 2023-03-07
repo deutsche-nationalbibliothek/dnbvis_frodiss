@@ -83,7 +83,7 @@ with st.sidebar:
     
 
 
-st.subheader("Über diese Visualisierung")
+st.subheader("Über DNBVIS_frodiss")
 
 st.markdown('Die Anwendung visualisiert das Datenset "Freie Online-Hochschulschriften" der Deutschen Nationalbibliothek. Sie soll einen ersten visuellen Eindruck '
             " der Online-Dissertationen im Bestand der DNB geben, und zusätzlich verdeutlichen, "
