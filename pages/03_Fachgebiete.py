@@ -498,7 +498,7 @@ elif subject == "100 - Philosophie und Psychologie":
             
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
-                  height = 750, color_discrete_sequence=px.colors.sequential.algae)
+                  height = 750, color_discrete_sequence=px.colors.sequential.Aggrnyl)
     fig.update_traces(texttemplate="%{label}<br>%{percentEntry:.2%}",
                         #insidetextorientation='radial',
                         hovertemplate="<br>".join([
