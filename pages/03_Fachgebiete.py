@@ -335,7 +335,7 @@ if subject == "Übersicht":
         
         
     with threecol2: 
-        colour = (0,125,238)
+        colour = (122,219,112)
         fontsize = 16
         ddc_main = "Künste und Unterhaltung"
         i = conv1_pub_700
