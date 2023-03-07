@@ -608,7 +608,7 @@ elif subject == "500 - Naturwissenschaften und Mathematik":
             
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
-                  height = 750, color_discrete_sequence=px.colors.sequential.Hot)
+                  height = 750, color_discrete_sequence=px.colors.sequential.Inferno)
     fig.update_traces(insidetextorientation='radial', texttemplate="%{label}<br>%{percentEntry:.2%}",
                  hovertemplate="<br>".join([
                         "DDC-Sachgruppe: %{label}",
