@@ -716,7 +716,7 @@ elif subject == "900 - Geschichte und Geografie":
             
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
-                  height = 750, color_discrete_sequence=px.colors.sequential.Burg, range_color=[0.2,1])
+                  height = 750, color_discrete_sequence=px.colors.qualitative.Burg)
     fig.update_traces(insidetextorientation='radial', texttemplate="%{label}<br>%{percentEntry:.2%}",
                  hovertemplate="<br>".join([
                         "DDC-Sachgruppe: %{label}",
