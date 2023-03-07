@@ -377,7 +377,7 @@ if subject == "Übersicht":
     fourcol1, fourcol2, fourcol3 = st.columns(3)
       
     with fourcol1: 
-        colour = (178,51,213)
+        colour = (255,153,255)
         fontsize = 16
         ddc_main = "Geschichte und Geografie"
         i = conv1_pub_900
