@@ -112,7 +112,7 @@ st.plotly_chart(fig_s1, use_container_width=True)
 
 #if selection == 0:
 st.write('In dieser zweiten Darstellung wird das Verhältnis "Anderer Sprachen" zueinander visualisiert: ')
-fig_s2 = px.pie(other_lang, values='counts', labels='name', names='name', height=600, color_discrete_sequence=px.colors.sequential.RdBu)
+fig_s2 = px.pie(other_lang, values='counts', labels='name', names='name', height=800, color_discrete_sequence=px.colors.sequential.Plasma)
 fig_s2.update_traces(textinfo='label+percent', rotation=180, showlegend=True, textposition="inside", hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}")
 st.plotly_chart(fig_s2, use_container_width=False)
 #else:
