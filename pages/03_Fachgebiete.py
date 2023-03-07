@@ -433,7 +433,7 @@ elif subject == "Alle Fachgebiete":
         
     fig_all = px.bar(overview, x='DDC', y='Anzahl',         
                 color='DDC',
-                labels={'Well':'population of Canada'}, height=400, 
+                labels={'DDC':'DDC Hauptklasse'}, height=400, 
                 color_discrete_map={
                         '000': '#FE6B48',
                         '100': '#A3B800',
