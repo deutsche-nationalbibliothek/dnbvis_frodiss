@@ -98,12 +98,13 @@ st.subheader("Übersicht Sprachen")
 
 st.write('In der ersten Darstellung werden nur Sprachen mit mehr als 500 Titlen im Datenset ausgewiesen. Sprachen mit weniger als 500 Datensätzen '
          ' sind als "Andere Sprachen" zusammengefasst. Mehr Informationen zu diesen Sprachen finden Sie weiter unten in der zweiten Darstellung.')
-         
+st.info("Bewegen Sie den Mauszeiger auf ein Tortenstück, um weitere Informationen zu erhalten. "
+        "Scrollen Sie nach unten, um eine Aufschlüsselung der Einträge unter 'Andere Sprachen' zu betrachten.")
+
 fig_s1 = px.pie(main_lang, values='counts', labels='name', names='name', height=600, color_discrete_sequence=px.colors.sequential.RdBu)
 fig_s1.update_traces(textinfo='label+percent', hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}")
 st.plotly_chart(fig_s1, use_container_width=True)
 
-st.info("Bewegen Sie den Mauszeiger auf ein Tortenstück, um weitere Informationen zu erhalten.")
 #selected_points = plotly_events(fig_s1)
 #a=selected_points[0]
 #selection = a['pointNumber']
