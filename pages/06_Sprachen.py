@@ -99,25 +99,19 @@ st.subheader("Übersicht Sprachen")
 st.write('In der ersten Darstellung werden nur Sprachen mit mehr als 500 Titlen im Datenset ausgewiesen. Sprachen mit weniger als 500 Datensätzen '
          ' sind als "Andere Sprachen" zusammengefasst. Mehr Informationen zu diesen Sprachen finden Sie weiter unten in der zweiten Darstellung.')
          
-st.info("Bewegen Sie den Mauszeiger auf ein Tortenstück, um weitere Informationen zu erhalten.")
-
 fig_s1 = px.pie(main_lang, values='counts', labels='name', names='name', height=600, color_discrete_sequence=px.colors.sequential.RdBu)
 fig_s1.update_traces(textinfo='label+percent', hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}")
 st.plotly_chart(fig_s1, use_container_width=True)
 
-
+st.info("Bewegen Sie den Mauszeiger auf ein Tortenstück, um weitere Informationen zu erhalten.")
 #selected_points = plotly_events(fig_s1)
 #a=selected_points[0]
 #selection = a['pointNumber']
 
-#if selection == 0:
 st.write('In dieser zweiten Darstellung wird das Verhältnis "Anderer Sprachen" zueinander visualisiert: ')
 fig_s2 = px.pie(other_lang, values='counts', labels='name', names='name', height=650, color_discrete_sequence=px.colors.diverging.Portland)
 fig_s2.update_traces(textinfo='label+percent', rotation=180, showlegend=True, textposition="inside", hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}")
 st.plotly_chart(fig_s2, use_container_width=False)
-#else:
-#        st.write("Keine weitere Untergliederung vorhanden.")
-
 
 st.write(" ")
 st.write(" ")
