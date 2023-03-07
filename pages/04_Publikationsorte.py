@@ -87,7 +87,7 @@ with st.sidebar:
 
 st.subheader("Übersicht Publikationsorte") 
 
-st.write("Klicken Sie auf einen Publikationsort, um einen Link zu den Titeln im Katalog zu generieren. ")
+st.write("Klicken Sie auf einen Publikationsort, um einen Link zu den Titeln im Katalog zu generieren.")
 st.write("Der Link wird im Anschluss unter der Karte angezeigt. ")
 
 df = pd.read_json("data/geoplaces.json", encoding="utf-8")
@@ -137,7 +137,8 @@ else:
 st.write(" ")
 
 st.markdown(" ##### Informationen zu dieser Visualisierung") 
-st.markdown("Für diese Ansicht wurden vor allem die Angaben zum Publikationsort in den Datensätzen genutzt. Da Angaben hierzu jedoch häufig fehlten, "
-            " wurden die Ortsinformationen ergänzend aus dem Hochschulschriftenvermerk genutzt. Dies ist möglich, weil Hochschulschriften in der Regel auf den "
-            " Repositorien der promovierenden bzw. habilitierenden Hochschule veröffentlicht werden und damit in der Regel der Publikationsort auch dem Hochschulstandort entspricht. ")
+st.markdown("Ausschlaggebend für die örtliche Zuordnung ist die Angabe des Publikationsortes, oder, falls diese Information nicht vorhanden war, der Sitz der für die Publikation "
+            "verantwortlichen Hochschule. Dieser wurde dem Hochschulschriftenvermerk entnommen. Dies ist möglich, weil freie Online-Hochschulschriften in der Regel auf den "
+            " Repositorien der promovierenden bzw. habilitierenden Hochschule veröffentlicht werden und damit der Publikationsort überwiegend auch dem Hochschulstandort entspricht. "
+            " Der Fokus dieser Darstellung liegt dabei auf dem Publikationsort, der aber durchaus auch im Ausland liegen kann, sofern bspw. der Verlag seinen Hauptsitz im Ausland hat. ")
 st.markdown("Die Ortsangaben wurden anschließend bereinigt und vereinheitlicht, um eine automatisierte Georeferenzierung für die Kartendarstellung durchführen zu können. ")
