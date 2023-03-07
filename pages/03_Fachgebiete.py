@@ -291,7 +291,7 @@ if subject == "Übersicht":
         
         
     with twocol3: 
-        colour = (230,45,45)
+        colour = (255,51,51)
         fontsize = 16
         ddc_main = "Naturwissenschaften und Mathematik"
         i = conv1_pub_500
