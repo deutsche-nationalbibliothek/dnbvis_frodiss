@@ -122,9 +122,10 @@ st.plotly_chart(fig_s2, use_container_width=False)
 st.write(" ")
 st.write(" ")
 st.markdown(" ##### Informationen zu dieser Visualisierung") 
-st.markdown("In dieser Übersicht konnten bis auf lediglich 26 der 295.199 Datensätze nicht angezeigt werden. Grund dafür ist, dass die Datensätze keinen entsprechenden Eintrag "
-           " im Sprachenfeld enthalten (6 Datensätze), es sich um Einträge der Kategorien 'mis - einzelne andere Sprachen' handelt (12 Datensätze) oder um die Kategorie " 
-            "'und - nicht zu entscheiden' (8 Datensätze)." ) 
+st.markdown("In dieser Übersicht konnten lediglich 13 der 295.199 Datensätze nicht angezeigt werden. Grund dafür ist, dass die Datensätze keinen entsprechenden Eintrag "
+           " im Sprachenfeld enthalten (5 Datensätze) oder um Einträge der Kategorie 'und - nicht zu entscheiden' (8 Datensätze) handelt. Einträge unter den beiden "
+            " Sprachencodes 'mis - einzelne andere Sprachen' sowie 'mul - Mehrere Sprachen' werden dargestellt, können aber aufgrund der Erfassung nicht weiter "
+            " aufgeschlüsselt werden." )
 
 
 
