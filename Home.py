@@ -108,7 +108,7 @@ st.markdown("Informationen zur Datengrundlage: "
          " über den [Katalog der DNB](https://portal.dnb.de) aufgerufen werden können. ")
 
 st.write("Informationen zu den einzelnen Visualisierungen finden Sie unter den jeweiligen Darstellungen. "
-         ' Weitere Informationen zur Anwendung finden Sie unter dem Menüpunkt "Informationen". ')
+         ' Weitere Informationen zur Anwendung finden Sie unter dem Menüpunkt "Über DNBVIS_frodiss". ')
 
 st.write(" Das Datenset wird alle 4 Monate aktualisiert. Entsprechend aktuell sind die gezeigten Auswertungen. ")
           
