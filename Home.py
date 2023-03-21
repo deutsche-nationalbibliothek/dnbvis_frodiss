@@ -58,7 +58,7 @@ st.markdown(
 
 
 # ---- SIDEBAR ----- 
-overview = pd.read_csv("data/overview.csv", encoding="utf-8")
+overview = pd.read_csv("data/overview.csv", sep=';', encoding="utf-8")
 complete = 302228
 used = 301670
 
