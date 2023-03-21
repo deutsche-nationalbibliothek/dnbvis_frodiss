@@ -101,35 +101,25 @@ ninth = dissddc[dissddc["Parent_no"].astype(str).str.startswith('9')]
     
     
 pub_000 = zero['count'].sum()
-conv_pub_000 = f'{pub_000:,}'
-conv1_pub_000 = conv_pub_000.replace(',', '.')
+conv_pub_000 = f'{pub_000:,}'.replace(',', '.')
 pub_100 = first['count'].sum()
-conv_pub_100 = f'{pub_100:,}'
-conv1_pub_100 = conv_pub_100.replace(',', '.')
+conv_pub_100 = f'{pub_100:,}'.replace(',', '.')
 pub_200 = second['count'].sum()
-conv_pub_200 = f'{pub_200:,}'
-conv1_pub_200 = conv_pub_200.replace(',', '.')
+conv_pub_200 = f'{pub_200:,}'.replace(',', '.')
 pub_300 = third['count'].sum()
-conv_pub_300 = f'{pub_300:,}'
-conv1_pub_300 = conv_pub_300.replace(',', '.')
+conv_pub_300 = f'{pub_300:,}'.replace(',', '.')
 pub_400 = fourth['count'].sum()
-conv_pub_400 = f'{pub_400:,}'
-conv1_pub_400 = conv_pub_400.replace(',', '.')
+conv_pub_400 = f'{pub_400:,}'.replace(',', '.')
 pub_500 = fifth['count'].sum()
-conv_pub_500 = f'{pub_500:,}'
-conv1_pub_500 = conv_pub_500.replace(',', '.')
+conv_pub_500 = f'{pub_500:,}'.replace(',', '.')
 pub_600 = sixth['count'].sum()
-conv_pub_600 = f'{pub_600:,}'
-conv1_pub_600 = conv_pub_600.replace(',', '.')
+conv_pub_600 = f'{pub_600:,}'.replace(',', '.')
 pub_700 = seventh['count'].sum()
-conv_pub_700 = f'{pub_700:,}'
-conv1_pub_700 = conv_pub_700.replace(',', '.')
+conv_pub_700 = f'{pub_700:,}'.replace(',', '.')
 pub_800 = eigth['count'].sum()
-conv_pub_800 = f'{pub_800:,}'
-conv1_pub_800 = conv_pub_800.replace(',', '.')
+conv_pub_800 = f'{pub_800:,}'.replace(',', '.')
 pub_900 = ninth['count'].sum()
-conv_pub_900 = f'{pub_900:,}'
-conv1_pub_900 = conv_pub_900.replace(',', '.')   
+conv_pub_900 = f'{pub_900:,}'.replace(',', '.')
 
 overview = pd.DataFrame({'Anzahl': [pub_000,pub_100,pub_200,pub_300,pub_400,pub_500,pub_600,pub_700,pub_800,pub_900], 
                          'DDC':['000','100','200','300','400','500','600','700','800','900']})
@@ -189,7 +179,7 @@ if subject == "Übersicht":
         fontsize = 16
         ddc_main = "Allgemeines, Informatik, Informationswissenschaft"
         #lnk = '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">'
-        i = conv1_pub_000
+        i = conv_pub_000
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D0*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
@@ -210,7 +200,7 @@ if subject == "Übersicht":
         colour = (163,184,0)
         fontsize = 16
         ddc_main = "Philosophie und Psychologie"
-        i = conv1_pub_100
+        i = conv_pub_100
 
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D%28100+OR+110+OR+120+OR+130+OR+140+OR+150+OR+160+OR+170+OR+180+OR+190%29&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]});
@@ -230,7 +220,7 @@ if subject == "Übersicht":
         colour = (153,153,255)
         fontsize = 16
         ddc_main = "Religion"
-        i = conv1_pub_200
+        i = conv_pub_200
 
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D2*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
@@ -253,7 +243,7 @@ if subject == "Übersicht":
         colour = (0,141,188)
         fontsize = 16
         ddc_main = "Sozialwissenschaften"
-        i = conv1_pub_300
+        i = conv_pub_300
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D3*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
@@ -273,7 +263,7 @@ if subject == "Übersicht":
         colour = (255,200,31)
         fontsize = 16
         ddc_main = "Sprache"
-        i = conv1_pub_400
+        i = conv_pub_400
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D4*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
@@ -294,7 +284,7 @@ if subject == "Übersicht":
         colour = (255,51,51)
         fontsize = 16
         ddc_main = "Naturwissenschaften und Mathematik"
-        i = conv1_pub_500
+        i = conv_pub_500
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D5*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
@@ -317,7 +307,7 @@ if subject == "Übersicht":
         colour = (255,184,77)
         fontsize = 16
         ddc_main = "Technik, Medizin, angewandte Wissenschaften"
-        i = conv1_pub_600
+        i = conv_pub_600
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D6*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
@@ -338,7 +328,7 @@ if subject == "Übersicht":
         colour = (51,204,204)
         fontsize = 16
         ddc_main = "Künste und Unterhaltung"
-        i = conv1_pub_700
+        i = conv_pub_700
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D7*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]});
@@ -358,7 +348,7 @@ if subject == "Übersicht":
         colour = (122,219,112)
         fontsize = 16
         ddc_main = "Literatur"
-        i = conv1_pub_800
+        i = conv_pub_800
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D8*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
@@ -380,7 +370,7 @@ if subject == "Übersicht":
         colour = (255,153,255)
         fontsize = 16
         ddc_main = "Geschichte und Geografie"
-        i = conv1_pub_900
+        i = conv_pub_900
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+hsg%3D9*&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
