@@ -84,7 +84,7 @@ conv_pub_800 = f'{pub_800:,}'.replace(',', '.')
 pub_900 = ninth['count'].sum()
 conv_pub_900 = f'{pub_900:,}'.replace(',', '.')
 
-overview = pd.DataFrame({'Anzahl': [pub_000,pub_100,pub_200,pub_300,pub_400,pub_500,pub_600,pub_700,pub_800,pub_900], 
+overview_ddc = pd.DataFrame({'Anzahl': [pub_000,pub_100,pub_200,pub_300,pub_400,pub_500,pub_600,pub_700,pub_800,pub_900], 
                          'DDC':['000','100','200','300','400','500','600','700','800','900']})
 
 
@@ -384,7 +384,7 @@ elif subject == "Alle Fachgebiete":
         
     st.write("Visuelle Darstellung der Verteilung auf die 10 DDC-Hauptklassen:")        
         
-    fig_all = px.bar(overview, x='DDC', y='Anzahl',         
+    fig_all = px.bar(overview_ddc, x='DDC', y='Anzahl',         
                 color='DDC',
                 labels={'DDC':'DDC Hauptklasse'}, height=400, 
                 color_discrete_map={
@@ -692,12 +692,16 @@ elif subject == "900 - Geschichte und Geografie":
 else:
     
     st.write("Data missing")
+        
+        
+records_ddc = overview['records_hss'].values[-1] - overview['no_ddc'].values[-1] 
+records_ddc = f'{records_ddc:,}'.replace(',', '.')
             
 st.write(" ")
 st.write(" ")
             
 st.markdown(" ##### Informationen zu dieser Visualisierung:")
-st.markdown("Für die Übersicht nach Fachgebieten konnten insgesamt 294.413 Datensätze berücksichtigt werden. Hiervon verfügte ein Großteil "
+st.markdown(f"Für die Übersicht nach Fachgebieten konnten insgesamt {records_ddc} Datensätze berücksichtigt werden. Hiervon verfügte ein Großteil "
             " über einen entsprechenden Eintrag einer DDC-Klasse, bei 20.483 Datensätze war ein solcher Eintrag jedoch zunächst nicht vorhanden. "
             " Um diese Lücke zu füllen, wurden, sofern vorhanden, Einträge älterer DNB-Sachgruppen herangezogen und anhand bestehender Mappings bzw. Konkordanzlisten "
             " einer DDC-Klasse zugeordnet. Dadurch konnten weitere Datensätze nachträglich mit DDC-Klassen angereichert werden. Für "
