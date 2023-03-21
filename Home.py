@@ -162,6 +162,6 @@ st.write(" ")
 st.write("Darin enthalten:")
 
 one, two, three = st.columns(3)
-one.metric(label="Dissertationen", value=conv1_diss_112022, delta=conv1_delta_diss)
-two.metric(label="Habilitationen", value=conv1_habil_112022, delta=conv1_delta_habil)
+one.metric(label="Dissertationen", value=conv1_diss_032023, delta=conv1_delta_diss)
+two.metric(label="Habilitationen", value=conv1_habil_032023, delta=conv1_delta_habil)
 three.metric(label="Andere Hochschulschriften", value=conv1_other_112022)
