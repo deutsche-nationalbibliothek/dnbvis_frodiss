@@ -48,7 +48,7 @@ with st.sidebar:
 
     
 dissyears = pd.read_json("data/diss_years.json")
-
+records_years = overview['years_from_1990'].values[-1]
 
 st.subheader("Anzahl der Online-Hochschulschriften im Bestand ab 1990: ")
 
@@ -79,7 +79,7 @@ st.markdown('Das Datenset "Freie Online-Hochschulschriften" enthält Datensätze
             "vor dem Beginn der Sammlung digitaler Hochschulschriften veröffentlicht wurden. "
             "Digitalisierte Hochschulschriften mit einem Erscheinungsdatum vor 1990 sind daher in sehr geringem Umfang ebenfalls im Set enthalten. " 
             "Für eine möglichst übersichtliche Darstellung der Publikationsjahre wurde diese auf die Erscheinungsjahre ab 1990 "
-            "beschränkt. Enstprechend liegen dieser Darstellung 294.809 Publikationen zugrunde. ") 
+            f"beschränkt. Enstprechend liegen dieser Darstellung {records_years} Publikationen zugrunde. ") 
     
 
         
