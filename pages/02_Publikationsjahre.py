@@ -49,7 +49,7 @@ with st.sidebar:
     
 dissyears = pd.read_json("data/diss_years.json")
 records_years = int(overview['years_from_1990'].values[-1])
-records_years = f'{overview:,}'.replace(',', '.')
+records_years = f'{records_years:,}'.replace(',', '.')
 
 st.subheader("Anzahl der Online-Hochschulschriften im Bestand ab 1990: ")
 
