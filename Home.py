@@ -59,7 +59,7 @@ st.markdown(
 
 # ---- SIDEBAR ----- 
 overview = pd.read_csv("data/overview.csv", sep=';', encoding="utf-8")
-complete = overview['records_all'].values[-1]
+complete = int(overview['records_all'].values[-1])
 used = 301670
 
 with st.sidebar:
