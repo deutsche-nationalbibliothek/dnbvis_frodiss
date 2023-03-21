@@ -12,50 +12,11 @@ from streamlit_plotly_events import plotly_events
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
 st.set_page_config(page_title='DNBVIS_frodiss', page_icon = logo) # , layout = 'wide')
 
-st.markdown(
-        """
-        <style>
-           [data-testid="stSidebarNav"]{
-                height: 450px;
-                background-image: url(https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg);
-                background-repeat: no-repeat;
-                background-position: 25px 25px;
-                }
-           [data-testid="stSidebarNav"]::before{
-                content: "DNBVIS_frodiss";
-                font-size: 25px;
-                top: 90px;
-                margin-left: 25px;
-                position: relative;
-                }
-           .css-wjbhl0{
-                max-height: 450px;
-                padding-top: 125px;
-                height: 400px;
-                }
-           .css-hied5v{
-                max-height: 450px;
-                padding-top: 125px;
-                height: 400px;
-                }
-           [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
-                 gap: 0rem;
-                }
-           [data-testid=stSidebar] [data-testid=stImage]{
-                text-align: center;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-                }
-            [data-testid=stSidebar] a:link{
-                text-decoration: none;
-                color: black
-                }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+def local_css(file):
+        with open(file) as f:
+                st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+local_css("data/style.css")
 
 
 # ---- SIDEBAR ----- 
