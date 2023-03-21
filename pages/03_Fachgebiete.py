@@ -694,7 +694,7 @@ else:
     st.write("Data missing")
         
         
-records_ddc = overview['records_hss'].values[-1] - overview['no_ddc'].values[-1] 
+records_ddc = int(overview['records_hss'].values[-1] - overview['no_ddc'].values[-1]) 
 records_ddc = f'{records_ddc:,}'.replace(',', '.')
             
 st.write(" ")
