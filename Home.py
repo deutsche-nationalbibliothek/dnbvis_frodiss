@@ -117,8 +117,6 @@ st.write(" Das Datenset wird alle 4 Monate aktualisiert. Entsprechend aktuell si
           
 st.write("")
 
-st.dataframe(overview)
-
 all_ofd = used
 all_ofd_11_2022 = 295199
 conv_ofd = f'{all_ofd:,}'
