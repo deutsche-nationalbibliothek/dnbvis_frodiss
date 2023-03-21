@@ -68,7 +68,7 @@ with st.sidebar:
         
         st.write("Datensätze im Set: ", complete)     
         st.write("Stand der Daten: ", timestamp)
-        st.write("Zuletzt aktualisiert: 21.03.2023")
+        st.write("Zuletzt aktualisiert: ", update)
         st.markdown('#') 
         st.markdown('#') 
         
