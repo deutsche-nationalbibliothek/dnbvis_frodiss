@@ -58,6 +58,8 @@ st.markdown(
 
 
 # ---- SIDEBAR ----- 
+overview = pd.read_csv("data/overview.csv", encoding="utf-8")
+st.dataframe(overview)
 complete = 302228
 used = 301670
 
