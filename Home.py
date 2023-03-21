@@ -115,13 +115,10 @@ st.write(" Das Datenset wird alle 4 Monate aktualisiert. Entsprechend aktuell si
 st.write("")
 
 all_ofd = used
-all_ofd_11_2022 = 295756
-all_ofd_06_2022 = 288123
+all_ofd_11_2022 = 295199
 conv_ofd = f'{all_ofd:,}'
 conv1_ofd = conv_ofd.replace(',', '.')
 
-
-ofd_03_2022 = 282864
 growth = all_ofd-all_ofd_11_2022
 conv_growth = f'{growth:,}'
 conv1_growth = conv_growth.replace(',', '.')
@@ -130,7 +127,6 @@ update = conv1_growth + ' (seit der letzten Aktualisierung hinzugekommen)'
 
 diss_032023 = 298540
 diss_112022 = 292161
-diss_062022 = 285183
 delta_diss = diss_032023 - diss_112022
 conv_diss_032023 = f'{diss_032023:,}'
 conv1_diss_032023 = conv_diss_032023.replace(',', '.')
