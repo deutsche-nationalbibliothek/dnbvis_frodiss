@@ -59,7 +59,6 @@ st.markdown(
 
 # ---- SIDEBAR ----- 
 overview = pd.read_csv("data/overview.csv", encoding="utf-8")
-st.dataframe(overview)
 complete = 302228
 used = 301670
 
@@ -115,6 +114,8 @@ st.write("Informationen zu den einzelnen Visualisierungen finden Sie unter den j
 st.write(" Das Datenset wird alle 4 Monate aktualisiert. Entsprechend aktuell sind die gezeigten Auswertungen. ")
           
 st.write("")
+
+st.dataframe(overview)
 
 all_ofd = used
 all_ofd_11_2022 = 295199
