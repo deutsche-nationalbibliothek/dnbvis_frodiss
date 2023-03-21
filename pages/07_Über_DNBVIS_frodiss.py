@@ -8,7 +8,6 @@ import plotly.express as px
 
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
 st.set_page_config(page_title='DNBVIS_frodiss', page_icon = logo) # , layout = 'wide')
-complete = 295756
 
 st.markdown(
         """
@@ -57,14 +56,17 @@ st.markdown(
 
 
 # ---- SIDEBAR ----- 
-complete = 295756
-used = 295199
+overview = pd.read_csv("data/overview.csv", sep=';', encoding="utf-8")
+complete = int(overview['records_all'].values[-1])
+used =  int(overview['records_hss'].values[-1])   #301670
+timestamp = overview['timestamp'].values[-1]
+update = overview['update'].values[-1]
 
 with st.sidebar:
         
         st.write("Datensätze im Set: ", complete)     
-        st.write("Stand der Daten: 03.11.2022")
-        st.write("Zuletzt aktualisiert: 07.03.2023")
+        st.write("Stand der Daten: ", timestamp)
+        st.write("Zuletzt aktualisiert: ", update)
         st.markdown('#') 
         st.markdown('#') 
         
