@@ -42,11 +42,8 @@ with st.sidebar:
                 column1.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
                 column2.markdown('<style>img {width: 75px; display: block; margin-left: auto; margin-right: auto; margin-top: 10px;}</style><a href="https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss", target="new"><img src="https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png"></a>', unsafe_allow_html=True)
                 
-#----------------        
-    
-    
-
-    
+#----------------          
+ 
 dissddc = pd.read_json("data/diss_ddc.json")
 df = pd.read_json("data/diss_ddc.json", dtype = str)
 
@@ -88,6 +85,11 @@ overview_ddc = pd.DataFrame({'Anzahl': [pub_000,pub_100,pub_200,pub_300,pub_400,
                          'DDC':['000','100','200','300','400','500','600','700','800','900']})
 
 
+records_ddc = int(overview['records_hss'].values[-1] - overview['no_ddc'].values[-1]) 
+records_ddc = f'{records_ddc:,}'.replace(',', '.')
+ddc_missing_at_first = int(overview['ddc_missing_at_first'].values[-1])
+ddc_missing_at_first = f'{ddc_missing_at_first:,}'.replace(',', '.')
+missing = int(overview['no_ddc'].values[-1])
 
 # --------- DDC -----------------
 
@@ -126,10 +128,6 @@ def show_ddc():
     
 
         
-
-        
-missing = 786
-    
     
     
 if subject == "Übersicht": 
@@ -693,16 +691,13 @@ else:
     
     st.write("Data missing")
         
-        
-records_ddc = int(overview['records_hss'].values[-1] - overview['no_ddc'].values[-1]) 
-records_ddc = f'{records_ddc:,}'.replace(',', '.')
-            
+                  
 st.write(" ")
 st.write(" ")
             
 st.markdown(" ##### Informationen zu dieser Visualisierung:")
 st.markdown(f"Für die Übersicht nach Fachgebieten konnten insgesamt {records_ddc} Datensätze berücksichtigt werden. Hiervon verfügte ein Großteil "
-            " über einen entsprechenden Eintrag einer DDC-Klasse, bei 20.483 Datensätze war ein solcher Eintrag jedoch zunächst nicht vorhanden. "
+            f" über einen entsprechenden Eintrag einer DDC-Klasse, bei {ddc_missing_at_first} Datensätze war ein solcher Eintrag jedoch zunächst nicht vorhanden. "
             " Um diese Lücke zu füllen, wurden, sofern vorhanden, Einträge älterer DNB-Sachgruppen herangezogen und anhand bestehender Mappings bzw. Konkordanzlisten "
             " einer DDC-Klasse zugeordnet. Dadurch konnten weitere Datensätze nachträglich mit DDC-Klassen angereichert werden. Für "
-            " 786 Datensätze, die keinen Eintrag zu einem Fachgebiet enthielten, war dies nicht möglich. ") 
+            f" {missing} Datensätze, die keinen Eintrag zu einem Fachgebiet enthielten, war dies nicht möglich. ") 
