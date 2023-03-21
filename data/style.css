@@ -12,7 +12,9 @@
                 position: relative;
                 }
 .css-m8hsoe{
-                padding-top: 125px;      
+                max-height: 450px;
+                padding-top: 125px;
+                height: 400px;      
 }
 .css-wjbhl0{
                 max-height: 450px;
