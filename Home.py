@@ -9,7 +9,7 @@ import plotly.express as px
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
 st.set_page_config(page_title='DNBVIS_frodiss', page_icon = logo) # , layout = 'wide')
 
-#last update: 06-02-2023
+#last update: 21-03-2023
 
 st.markdown(
         """
@@ -58,14 +58,14 @@ st.markdown(
 
 
 # ---- SIDEBAR ----- 
-complete = 295756
-used = 295199
+complete = 302228
+used = 301670
 
 with st.sidebar:
         
         st.write("Datensätze im Set: ", complete)     
-        st.write("Stand der Daten: 03.11.2022")
-        st.write("Zuletzt aktualisiert: 07.03.2023")
+        st.write("Stand der Daten: 16.03.2023")
+        st.write("Zuletzt aktualisiert: 21.03.2023")
         st.markdown('#') 
         st.markdown('#') 
         
@@ -115,29 +115,34 @@ st.write(" Das Datenset wird alle 4 Monate aktualisiert. Entsprechend aktuell si
 st.write("")
 
 all_ofd = used
+all_ofd_11_2022 = 295756
 all_ofd_06_2022 = 288123
 conv_ofd = f'{all_ofd:,}'
 conv1_ofd = conv_ofd.replace(',', '.')
 
+
 ofd_03_2022 = 282864
-growth = all_ofd-all_ofd_06_2022
+growth = all_ofd-all_ofd_11_2022
 conv_growth = f'{growth:,}'
 conv1_growth = conv_growth.replace(',', '.')
 update = conv1_growth + ' (seit der letzten Aktualisierung hinzugekommen)'
 
+
+diss_032023 = 298540
 diss_112022 = 292161
 diss_062022 = 285183
-delta_diss = diss_112022-diss_062022
-conv_diss_112022 = f'{diss_112022:,}'
-conv1_diss_112022 = conv_diss_112022.replace(',', '.')
+delta_diss = diss_032022 - diss_112022
+conv_diss_032023 = f'{diss_032023:,}'
+conv1_diss_032023 = conv_diss_032023.replace(',', '.')
 conv_delta_diss = f'{delta_diss:,}'
 conv1_delta_diss = conv_delta_diss.replace(',', '.')
 
+habil_032023 = 3089
 habil_112022 = 2994 
 habil_062022 = 2896
-delta_habil = habil_112022-habil_062022
-conv_habil_112022 = f'{habil_112022:,}'
-conv1_habil_112022 = conv_habil_112022.replace(',', '.')
+delta_habil = habil_032023 - habil_112022
+conv_habil_032023 = f'{habil_032023:,}'
+conv1_habil_032023 = conv_habil_032023.replace(',', '.')
 conv_delta_habil = f'{delta_habil:,}'
 conv1_delta_habil = conv_delta_habil.replace(',', '.')
 
