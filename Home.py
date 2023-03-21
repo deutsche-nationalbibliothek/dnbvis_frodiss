@@ -61,11 +61,13 @@ st.markdown(
 overview = pd.read_csv("data/overview.csv", sep=';', encoding="utf-8")
 complete = int(overview['records_all'].values[-1])
 used =  int(overview['records_hss'].values[-1])   #301670
+timestamp = overview['timestamp'].values[-1]
+update = overview['update'].values[-1]
 
 with st.sidebar:
         
         st.write("Datensätze im Set: ", complete)     
-        st.write("Stand der Daten: 16.03.2023")
+        st.write("Stand der Daten: ", timestamp)
         st.write("Zuletzt aktualisiert: 21.03.2023")
         st.markdown('#') 
         st.markdown('#') 
