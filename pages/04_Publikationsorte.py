@@ -7,6 +7,15 @@ import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
 from streamlit_plotly_events import plotly_events
+import os
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+dir_path = dir_path.replace("pages", "data")
+
+#file location paths:
+style = dir_path + "\style.css"
+overview = dir_path + "\overview.csv"
+geoplaces = dir_path + "\geoplaces.json"
 
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
 st.set_page_config(page_title='DNBVIS_frodiss', page_icon = logo) # , layout = 'wide')
@@ -15,11 +24,11 @@ def local_css(file):
         with open(file) as f:
                 st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("data/style.css")
+local_css(style)
 
 
 # ---- SIDEBAR ----- 
-overview = pd.read_csv("data/overview.csv", sep=';', encoding="utf-8")
+overview = pd.read_csv(overview, sep=';', encoding="utf-8")
 complete = int(overview['records_all'].values[-1])
 used =  int(overview['records_hss'].values[-1])   #301670
 timestamp = overview['timestamp'].values[-1]
@@ -34,15 +43,8 @@ with st.sidebar:
         st.markdown('#') 
         
         
-        github_logo_black = "GitHub_Logo.png"
-        github_logo_white = "GitHub_Logo_white.png"
+        st.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
         
-        with st.container():
-                column1, column2 = st.columns(2)
-                
-                column1.write("[DNBVIS_frodiss auf GitHub](https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss)")
-                column2.markdown('<style>img {width: 75px; display: block; margin-left: auto; margin-right: auto; margin-top: 10px;}</style><a href="https://github.com/deutsche-nationalbibliothek/dnbvis_frodiss", target="new"><img src="https://raw.githubusercontent.com/deutsche-nationalbibliothek/dnbvis_frodiss/main/GitHub_Logo.png"></a>', unsafe_allow_html=True)
-                
 #----------------        
     
     
@@ -53,7 +55,7 @@ st.subheader("Übersicht Publikationsorte")
 st.write("Klicken Sie auf einen Publikationsort, um einen Link zu den Titeln im Katalog zu generieren.")
 st.write("Der Link wird im Anschluss unter der Karte angezeigt. ")
 
-df = pd.read_json("data/geoplaces.json", encoding="utf-8")
+df = pd.read_json(geoplaces, encoding="utf-8")
 
 df["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+df["Place"].astype(str)
 update = (len(df["Place"]))

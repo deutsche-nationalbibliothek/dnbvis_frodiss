@@ -11,18 +11,19 @@
                 margin-left: 25px;
                 position: relative;
                 }
-.css-m8hsoe{
+.st-emotion-cache-m8hsoe{
                 max-height: 450px;
                 padding-top: 125px;
                 height: 400px;      
 }
-.css-1oe5cao{
+.st-emotion-cache-1oe5cao{
                 max-height: 450px;
                 padding-top: 125px;
                 height: 400px;
                 }
 [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
                  gap: 0rem;
+				 max-height: 450px;
                 }
 [data-testid=stSidebar] [data-testid=stImage]{
                 text-align: center;
@@ -33,5 +34,5 @@
                 }
 [data-testid=stSidebar] a:link{
                 text-decoration: none;
-                color: black
+                color: blue
                 }
