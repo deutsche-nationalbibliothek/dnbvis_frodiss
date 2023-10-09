@@ -17,6 +17,7 @@ style = "data/style.css"  # online version
 #style = dir_path + "\data\style.css" # offline version
 #overview = dir_path + "\data\overview.csv"
 overview = "data/overview.csv"
+diss_lang = "data/diss_lang.json"
 
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
 st.set_page_config(page_title='DNBVIS_frodiss', page_icon = logo) # , layout = 'wide')
