@@ -12,9 +12,10 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 dir_path = dir_path.replace("pages", "data")
 
 #file location paths:
-style = dir_path + "\style.css"
-overview = dir_path + "\overview.csv"
-diss_ddc = dir_path + "\diss_ddc.json"
+style = "data/style.css"  # online version
+#style = dir_path + "\data\style.css" # offline version
+#overview = dir_path + "\data\overview.csv"
+overview = "data/overview.csv"
 
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
 st.set_page_config(page_title='DNBVIS_frodiss', page_icon = logo) # , layout = 'wide')

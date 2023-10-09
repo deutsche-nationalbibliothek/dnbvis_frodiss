@@ -23,7 +23,7 @@ def local_css(file):
         with open(file) as f:
                 st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-#last update: 02-10-2023
+#last update: 09-10-2023
 
 local_css(style)
 
