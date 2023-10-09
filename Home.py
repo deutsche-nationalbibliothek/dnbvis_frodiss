@@ -10,8 +10,10 @@ import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 #file location paths:
-style = dir_path + "\data\style.css"
-overview = dir_path + "\data\overview.csv"
+style = \data\style.css  # online version
+#style = dir_path + "\data\style.css" # offline version
+#overview = dir_path + "\data\overview.csv"
+overview = \data\overview.csv
 
 
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
