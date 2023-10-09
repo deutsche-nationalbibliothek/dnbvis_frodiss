@@ -25,7 +25,7 @@ def local_css(file):
 
 #last update: 02-10-2023
 
-local_css(data/style.css)
+local_css(style)
 
 
 # ---- SIDEBAR ----- 
