@@ -47,7 +47,7 @@ with st.sidebar:
         
 #----------------          
  
-dissddc = pd.read_json(diss_ddc)
+dissddc = pd.read_json(diss_ddc, encoding="utf-8")
 df = pd.read_json(diss_ddc, dtype = str)
 
 
