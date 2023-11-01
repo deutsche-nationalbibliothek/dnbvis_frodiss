@@ -108,6 +108,6 @@ st.markdown("Ausschlaggebend für die örtliche Zuordnung ist die Angabe des Pub
             "verantwortlichen Hochschule. Dieser wurde dem Hochschulschriftenvermerk entnommen. Dies ist möglich, weil freie Online-Hochschulschriften in der Regel auf den "
             " Repositorien der promovierenden bzw. habilitierenden Hochschule veröffentlicht werden und damit der Publikationsort überwiegend auch dem Hochschulstandort entspricht. "
             " Der Fokus dieser Darstellung liegt dabei auf dem Publikationsort, der aber durchaus auch im Ausland liegen kann, sofern bspw. der Verlag seinen Hauptsitz im Ausland hat. ")
-st.markdown("Die Ortsangaben wurden anschließend bereinigt und vereinheitlicht. Die so entnommenen Ortsangaben wurden dann mit Hilfe der [lobid-reconciliation-API](https://lobid.org/gnd/reconcile) " 
+st.markdown("Die Ortsangaben wurden anschließend bereinigt und vereinheitlicht. Die so entnommenen Ortsangaben wurden mit Hilfe der [lobid-reconciliation-API](https://lobid.org/gnd/reconcile) " 
             " zunächst mit der GND abgeglichen, um bspw. verschiedene Namensformen zu berücksichtigen. Über die SRU-Schnittstelle der DNB wurden zu den einzelnen "
             " Geografika dann die Koordinaten aus dem Normdatensatz abgerufen, um mit diesen schließlich die Kartendarstellung der Publikationsorte realisiert. ")
