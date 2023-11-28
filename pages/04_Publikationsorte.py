@@ -63,7 +63,7 @@ df["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&que
 update = (len(df["Place"]))
 
     
-fig3 = px.scatter_mapbox(df, lat="lat", lon="lon", hover_name="Place", 
+fig3 = px.scatter_mapbox(df, lat="lat", lon="long", hover_name="Place", 
                          size="count", color="count", color_continuous_scale=px.colors.cyclical.IceFire, zoom=5, 
                          height=500, labels={
                                         "count": "Anzahl",
