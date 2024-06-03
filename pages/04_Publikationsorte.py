@@ -17,7 +17,7 @@ style = "data/style.css"  # online version
 #style = dir_path + "\data\style.css" # offline version
 #overview = dir_path + "\data\overview.csv"
 overview = "data/overview.csv"
-geoplaces = "data/geoplaces.json"
+unidata = "data/unidata.json"
 
 logo = "https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg"
 st.set_page_config(page_title='DNBVIS_frodiss', page_icon = logo) # , layout = 'wide')
@@ -52,20 +52,21 @@ with st.sidebar:
     
 
 
-st.subheader("Übersicht Publikationsorte") 
+st.subheader("Übersicht Hochschulen") 
 
-st.write("Klicken Sie auf einen Publikationsort, um einen Link zu den Titeln im Katalog zu generieren.")
-st.write("Der Link wird im Anschluss unter der Karte angezeigt. ")
+st.write("Klicken Sie auf einen Publikationsort, um einen Link zu den zugehörigen Titeln im Katalog zu generieren.")
+st.write("Der Link wird im Anschluss unter der Karte angezeigt.")
 
-df = pd.read_json(geoplaces, encoding="utf-8")
+df_pub = pd.read_json(geoplaces, encoding="utf-8")
 
-df["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+df["Place"].astype(str)
-update = (len(df["Place"]))
-
+pub_loc = df_pub["Place"].astype(str)
+pub_loc = pub_loc.str.replace(" ","%20")
+df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+pub_loc
     
-fig3 = px.scatter_mapbox(df, lat="lat", lon="long", hover_name="Place", 
-                         size="count", color="count", color_continuous_scale=px.colors.cyclical.IceFire, zoom=5, 
-                         height=500, labels={
+    
+fig3 = px.scatter_mapbox(df_pub, lat="lat", lon="lon", hover_name="Place",
+                        size="count", color="count", color_continuous_scale=px.colors.cyclical.Phase, zoom=5, #height=500,
+                        labels={
                                         "count": "Anzahl",
                                         "lat":"Latitude",
                                         "lon":"Longitude"
@@ -73,6 +74,7 @@ fig3 = px.scatter_mapbox(df, lat="lat", lon="long", hover_name="Place",
                         )
 fig3.update_layout(mapbox_style="open-street-map", 
                       mapbox=dict(
+                            #accesstoken=mapbox_access_token,
                             bearing=0,
                             center=dict(
                                     lat=51.10,
@@ -83,28 +85,26 @@ fig3.update_layout(mapbox_style="open-street-map",
 fig3.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 
+#st.plotly_chart(fig3, use_container_width=True)
 
-
-
-select = 1000
-selected_points = plotly_events(fig3)
-
+select=1000
+selected_points = plotly_events(fig4)
 
 if selected_points: 
         a=selected_points[0]
         select = a['pointNumber']  
 
 if select != 1000:
-        place = df.iloc[select]['Place']
-        link = df.iloc[select]['url']
-        st.info(f"Zu den Publikationen aus [{place}](%s)" % link)
+        place = df_pub.iloc[select]['Place']
+        link1 = df_pub.iloc[select]['url']
+        st.info(f"Zu den im Set enthaltenen Publikationen aus [{Place}](%s)" % link1)
 else:
         st.write(" ")
         
-
 st.write(" ")
-
-st.markdown(" ##### Informationen zu dieser Visualisierung") 
+st.write(" ") 
+        
+st.markdown(" ##### Informationen zu dieser Visualisierung")
 st.markdown("Ausschlaggebend für die örtliche Zuordnung ist die Angabe des Publikationsortes, oder, falls diese Information nicht vorhanden war, der Sitz der für die Publikation "
             "verantwortlichen Hochschule. Dieser wurde dem Hochschulschriftenvermerk entnommen. Dies ist möglich, weil freie Online-Hochschulschriften in der Regel auf den "
             " Repositorien der promovierenden bzw. habilitierenden Hochschule veröffentlicht werden und damit der Publikationsort überwiegend auch dem Hochschulstandort entspricht. "
