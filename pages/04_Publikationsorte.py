@@ -57,7 +57,7 @@ st.subheader("Übersicht Publikationsorte")
 st.write("Klicken Sie auf einen Publikationsort, um einen Link zu den zugehörigen Titeln im Katalog zu generieren.")
 st.write("Der Link wird im Anschluss unter der Karte angezeigt.")
 
-df_pub = pd.read_json(geoplaces, encoding="utf-8")
+df_pub = pd.read_json("data/geoplaces.json", encoding="utf-8")
 
 pub_loc = df_pub["Place"].astype(str)
 pub_loc = pub_loc.str.replace(" ","%20")
