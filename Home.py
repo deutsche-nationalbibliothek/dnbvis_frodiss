@@ -23,7 +23,7 @@ def local_css(file):
         with open(file) as f:
                 st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-#last update: 09-10-2023
+#last update: 03-06-2024
 
 local_css(style)
 
@@ -62,7 +62,7 @@ testcolor = ['#ff6900', '#fcb900', '#7bdcb5', '#00d084', '#8ed1fc',
 #st.header('"Freie Online-Hochschulschriften" in der DNB')
 st.markdown('''
                 <p style="font-size:34px; margin-bottom:0px"><b> "Freie Online-Hochschulschriften" in der DNB </b></p>
-                <p style="font-size:22px; margin-bottom:3px; margin-top:5px"> von Stephanie Palek </p><p style="font-size:19px"> unter Leitung von Dr. Kurt Schneider </p>
+                <p style="font-size:22px; margin-bottom:3px; margin-top:5px"> von Stephanie Palek </p><p style="font-size:16px"> unter Leitung von Dr. Kurt Schneider </p>
                 <br> 
                ''',
        unsafe_allow_html=True,
