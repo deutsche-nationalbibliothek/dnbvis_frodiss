@@ -97,7 +97,7 @@ if selected_points:
 if select != 1000:
         place = df_pub.iloc[select]['Place']
         link1 = df_pub.iloc[select]['url']
-        st.info(f"Zu den im Set enthaltenen Publikationen aus [{Place}](%s)" % link1)
+        st.info(f"Zu den im Set enthaltenen Publikationen aus [{place}](%s)" % link1)
 else:
         st.write(" ")
         
