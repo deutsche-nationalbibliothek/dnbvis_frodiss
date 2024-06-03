@@ -700,7 +700,7 @@ st.write(" ")
             
 st.markdown(" ##### Informationen zu dieser Visualisierung:")
 st.markdown(f"Für die Übersicht nach Fachgebieten konnten insgesamt {records_ddc} Datensätze berücksichtigt werden. Hiervon verfügte ein Großteil "
-            f" über einen entsprechenden Eintrag einer DDC-Klasse, bei {ddc_missing_at_first} Datensätze war ein solcher Eintrag jedoch zunächst nicht vorhanden. "
-            " Um diese Lücke zu füllen, wurden, sofern vorhanden, Einträge älterer DNB-Sachgruppen herangezogen und anhand bestehender Mappings bzw. Konkordanzlisten "
+            f" über einen entsprechenden Eintrag einer DDC-Klasse, bei einigen Datensätzen war ein solcher Eintrag jedoch zunächst nicht vorhanden. "
+            " Sofern vorhanden, wurden hierfür Einträge älterer DNB-Sachgruppen herangezogen und anhand bestehender Mappings bzw. Konkordanzlisten "
             " einer DDC-Klasse zugeordnet. Dadurch konnten weitere Datensätze nachträglich mit DDC-Klassen angereichert werden. Für "
             f" {missing} Datensätze, die keinen Eintrag zu einem Fachgebiet enthielten, war dies nicht möglich. ") 
