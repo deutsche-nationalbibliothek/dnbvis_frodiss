@@ -64,7 +64,7 @@ pub_loc = pub_loc.str.replace(" ","%20")
 df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+pub_loc
     
     
-fig3 = px.scatter_mapbox(df_pub, lat="lat", lon="lon", hover_name="Place",
+fig3 = px.scatter_mapbox(df_pub, lat="lat", lon="long", hover_name="Place",
                         size="count", color="count", color_continuous_scale=px.colors.cyclical.Phase, zoom=5, #height=500,
                         labels={
                                         "count": "Anzahl",
