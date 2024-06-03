@@ -86,8 +86,9 @@ fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 
 
 
-selected_points = plotly_events(fig3)
 select = 1000
+selected_points = plotly_events(fig3)
+
 
 if selected_points: 
         a=selected_points[0]
