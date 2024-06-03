@@ -65,7 +65,7 @@ df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true
     
     
 fig3 = px.scatter_mapbox(df_pub, lat="lat", lon="long", hover_name="Place",
-                        size="count", color="count", color_continuous_scale=px.colors.cyclical.Phase, zoom=5, #height=500,
+                        size="count", color="count", color_continuous_scale=px.colors.cyclical.IceFire, zoom=5, #height=500,
                         labels={
                                         "count": "Anzahl",
                                         "lat":"Latitude",
