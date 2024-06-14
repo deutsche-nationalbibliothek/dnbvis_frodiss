@@ -59,10 +59,9 @@ dnbcolor = ['#FEFEFE', '#2499ff', '#f33930', '#b6c73f', '#ffd44d',
 testcolor = ['#ff6900', '#fcb900', '#7bdcb5', '#00d084', '#8ed1fc',
             '#0693e3', '#abb8c3', '#eb144c', '#f78da7', '#9900ef']
 
-#st.header('"Freie Online-Hochschulschriften" in der DNB')
+#st.header('Freie Online-Hochschulschriften in der DNB')
 st.markdown('''
-                <p style="font-size:34px; margin-bottom:0px"><b> "Freie Online-Hochschulschriften" in der DNB </b></p>
-                <p style="font-size:22px; margin-bottom:3px; margin-top:5px"> von Stephanie Palek </p><p style="font-size:16px"> unter Leitung von Dr. Kurt Schneider </p>
+                <p style="font-size:34px; margin-bottom:0px"><b> Freie Online-Hochschulschriften in der DNB </b></p>
                 <br> 
                ''',
        unsafe_allow_html=True,
