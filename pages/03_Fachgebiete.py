@@ -93,6 +93,7 @@ records_ddc = f'{records_ddc:,}'.replace(',', '.')
 ddc_missing_at_first = int(overview['ddc_missing_at_first'].values[-1])
 ddc_missing_at_first = f'{ddc_missing_at_first:,}'.replace(',', '.')
 missing = int(overview['no_ddc'].values[-1])
+conv_missing = f'{missing:,}'.replace(',', '.')
 
 # --------- DDC -----------------
 
@@ -354,7 +355,7 @@ if subject == "Übersicht":
         colour = (255,255,255)
         fontsize = 16
         ddc_main = "Ohne Fachgebiet"
-        i = missing
+        i = conv_missing
         
         htmlstr = f"""<a href="https://portal.dnb.de/opac/simpleSearch?query=catalog%3Ddnb.hss+AND+hss%3Ddiss*+AND+location%3Donlinefree+AND+NOT+%28hsg%3D0*+OR+hsg%3D1*+OR+hsg%3D2*+OR+hsg%3D3*+OR+hsg%3D4*+OR+hsg%3D5*+OR+hsg%3D6*+OR+hsg%3D7*+OR+hsg%3D8*+OR+hsg%3D9*%29&cqlMode=true" target="new" style="text-decoration:none">
                         <p style='background-color: rgb({colour[0]}, {colour[1]}, {colour[2]}); 
