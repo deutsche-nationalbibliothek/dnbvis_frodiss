@@ -4,7 +4,7 @@
                 background-repeat: no-repeat;
                 background-position: 25px 25px;
                 }
-[data-testid="stSidebarHeader"]{
+[data-testid="stSidebarHeader"]::before{
                 content: "DNBVIS_frodiss";
                 font-size: 25px;
                 top: 90px;
