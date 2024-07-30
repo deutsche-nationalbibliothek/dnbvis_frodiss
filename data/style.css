@@ -4,12 +4,22 @@
                 background-repeat: no-repeat;
                 background-position: 25px 25px;
                 }
-[data-testid="stSidebarHeader"]{
+[data-testid="stSidebarNav"]::before{
                 content: "DNBVIS_frodiss";
                 font-size: 25px;
                 top: 90px;
                 margin-left: 25px;
                 position: relative;
+                }
+.st-emotion-cache-79elbk{
+                max-height: 450px;
+                padding-top: 125px;
+                height: 400px;      
+}
+.st-emotion-cache-10rjk4g{
+                max-height: 450px;
+                padding-top: 125px;
+                height: 400px;
                 }
 [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
                  gap: 0rem;
