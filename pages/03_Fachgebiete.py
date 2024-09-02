@@ -660,12 +660,12 @@ elif subject == "800 - Literatur":
     
 
 #___________________________________
-# Funktion zur automatischen Umbruch der Labels
-def wrap_labels(text, width=20):
-    return "<br>".join(textwrap.wrap(text, width=width))
 
 elif subject == "900 - Geschichte und Geografie": 
-    
+    # Funktion zur automatischen Umbruch der Labels
+    def wrap_labels(text, width=20):
+        return "<br>".join(textwrap.wrap(text, width=width))    
+        
     st.info("Klicken Sie auf die einzelnen Elemente im inneren Ring, um eine detailliertere Darstellung der Teilmengen "
             "sehen zu können. Bewegen Sie Ihren Cursor auf ein Elemente, um Zusatzinformationen zu erhalten." ) 
 
