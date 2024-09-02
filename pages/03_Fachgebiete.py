@@ -661,10 +661,7 @@ elif subject == "800 - Literatur":
 
 #___________________________________
 
-elif subject == "900 - Geschichte und Geografie": 
-    # Funktion zur automatischen Umbruch der Labels
-    def wrap_labels(text, width=20):
-        return "<br>".join(textwrap.wrap(text, width=width))    
+elif subject == "900 - Geschichte und Geografie":     
         
     st.info("Klicken Sie auf die einzelnen Elemente im inneren Ring, um eine detailliertere Darstellung der Teilmengen "
             "sehen zu können. Bewegen Sie Ihren Cursor auf ein Elemente, um Zusatzinformationen zu erhalten." ) 
@@ -676,7 +673,7 @@ elif subject == "900 - Geschichte und Geografie":
                   height = 750, color_discrete_sequence=px.colors.sequential.Agsunset)
     fig.update_traces(insidetextorientation='radial', texttemplate="%{label}<br>%{percentEntry:.2%}",
                  hovertemplate="<br>".join([
-                        "DDC-Sachgruppe: %{wrap_labels(label)}",
+                        "DDC-Sachgruppe: %{label}",
                         "Anzahl: %{customdata[1]}",
                         "Anteil: %{percentEntry:.2%}",   
                         "DDC-Hauptklasse: %{customdata[2]} - %{customdata[0]}"]),
