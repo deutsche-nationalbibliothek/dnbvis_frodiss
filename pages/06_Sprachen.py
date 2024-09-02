@@ -68,7 +68,7 @@ st.info("Bewegen Sie den Mauszeiger auf ein Tortenstück, um weitere Information
         "Scrollen Sie nach unten, um eine Aufschlüsselung der Einträge unter 'Andere Sprachen' zu betrachten.")
 
 fig_s1 = px.pie(main_lang, values='counts', labels='name', names='name', height=600, color_discrete_sequence=px.colors.sequential.RdBu)
-fig_s1.update_traces(textinfo='label+percent', hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}")
+fig_s1.update_traces(textinfo='label+percent', hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}", textfont_size=16)
 st.plotly_chart(fig_s1, use_container_width=True)
 
 #selected_points = plotly_events(fig_s1)
@@ -78,7 +78,7 @@ st.plotly_chart(fig_s1, use_container_width=True)
 st.write('In dieser zweiten Darstellung wird das Verhältnis "Anderer Sprachen" zueinander visualisiert: ')
 st.info('Durch Klicken auf einzelne Sprachen in der Legende können diese aus der Darstellung ausgeschlossen werden.')
 fig_s2 = px.pie(other_lang, values='counts', labels='name', names='name', height=650, color_discrete_sequence=px.colors.diverging.Portland)
-fig_s2.update_traces(textinfo='label+percent', rotation=180, showlegend=True, textposition="inside", hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}")
+fig_s2.update_traces(textinfo='label+percent', rotation=180, showlegend=True, textposition="inside", hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}", textfont_size=16)
 st.plotly_chart(fig_s2, use_container_width=False)
 
 st.write(" ")
