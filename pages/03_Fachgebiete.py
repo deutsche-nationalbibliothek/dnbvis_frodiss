@@ -670,14 +670,13 @@ elif subject == "900 - Geschichte und Geografie":
             "sehen zu können. Bewegen Sie Ihren Cursor auf ein Elemente, um Zusatzinformationen zu erhalten." ) 
 
     df_000 = dissddc[dissddc["Parent_no"].astype(str).str.startswith('9')]
-    df_000['Sachgebiet_wrapped'] = df_000['Sachgebiet'].apply(lambda x: wrap_labels(x))
             
-    fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet_wrapped'], values='count', 
+    fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
                   height = 750, color_discrete_sequence=px.colors.sequential.Agsunset)
     fig.update_traces(insidetextorientation='radial', texttemplate="%{label}<br>%{percentEntry:.2%}",
                  hovertemplate="<br>".join([
-                        "DDC-Sachgruppe: %{label}",
+                        "DDC-Sachgruppe: %{wrap_labels(label)}",
                         "Anzahl: %{customdata[1]}",
                         "Anteil: %{percentEntry:.2%}",   
                         "DDC-Hauptklasse: %{customdata[2]} - %{customdata[0]}"]),
