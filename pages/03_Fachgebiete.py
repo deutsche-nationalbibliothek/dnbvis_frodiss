@@ -680,7 +680,7 @@ elif subject == "900 - Geschichte und Geografie":
                         "DDC-Hauptklasse: %{customdata[2]} - %{customdata[0]}"]),
                         sort=False,
                         rotation=180,
-                        textfont_size=16
+                        textfont_size=20
                  )
 
     st.plotly_chart(fig, use_container_width=True)
