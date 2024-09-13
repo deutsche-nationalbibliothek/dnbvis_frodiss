@@ -131,7 +131,13 @@ def show_ddc():
                 "owned by OCLC. Dewey, Dewey Decimal Classification, DDC, OCLC and WebDewey are registered trademarks of OCLC. ")
     
 
-        
+------------
+
+# Function to insert line breaks in labels longer than 20 characters
+def insert_line_breaks(label, max_len=20):
+    return "<br>".join([label[i:i + max_len] for i in range(0, len(label), max_len)])
+
+-------        
     
     
 if subject == "Übersicht": 
@@ -380,8 +386,8 @@ if subject == "Übersicht":
          " Suchindizes genutzt werden, kommt es bei der Treffermenge zu leichten Abweichungen zwischen der Gesamtzahl der jeweiligen Hochschulschriften "
          " im Katalog und in der Visualisierung.   ")    
     st.write(" ")  
-        
-        
+
+
 elif subject == "Alle Fachgebiete":    
         
     st.write("Visuelle Darstellung der Verteilung auf die 10 DDC-Hauptklassen:")        
@@ -667,7 +673,12 @@ elif subject == "900 - Geschichte und Geografie":
             "sehen zu können. Bewegen Sie Ihren Cursor auf ein Elemente, um Zusatzinformationen zu erhalten." ) 
 
     df_000 = dissddc[dissddc["Parent_no"].astype(str).str.startswith('9')]
-            
+
+    # Apply the function to your labels in the 'path'
+    df_000['DDCsecond_title'] = df_000['DDCsecond_title'].apply(lambda x: insert_line_breaks(x, 20))
+    df_000['Sachgebiet'] = df_000['Sachgebiet'].apply(lambda x: insert_line_breaks(x, 20))
+
+        
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
                   height = 750, color_discrete_sequence=px.colors.sequential.Agsunset)
