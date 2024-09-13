@@ -669,8 +669,26 @@ elif subject == "900 - Geschichte und Geografie":
 
     #------------
     # Function to insert line breaks in labels longer than 20 characters
+    #def insert_line_breaks(label, max_len=20):
+    #    return "<br>".join([label[i:i + max_len] for i in range(0, len(label), max_len)])   
+
     def insert_line_breaks(label, max_len=20):
-        return "<br>".join([label[i:i + max_len] for i in range(0, len(label), max_len)])    
+            # Split at whitespace near max_len while keeping all the rest of the label
+            words = label.split(' ')
+            new_label = []
+            line = ""
+    
+            for word in words:
+                # If adding the next word exceeds max_len, break the line
+                if len(line + word) > max_len:
+                    new_label.append(line.strip())  # Add the current line to new_label
+                    line = word + " "  # Start a new line with the current word
+                else:
+                    line += word + " "  # Add word to the current line
+    
+            new_label.append(line.strip())  # Add the last line
+
+            return "<br>".join(new_label)
         
     # Apply the function to your labels in the 'path'
     df_000['DDCsecond_title'] = df_000['DDCsecond_title'].apply(lambda x: insert_line_breaks(x, 20))
