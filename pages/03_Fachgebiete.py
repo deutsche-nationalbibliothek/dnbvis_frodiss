@@ -700,7 +700,7 @@ elif subject == "900 - Geschichte und Geografie":
                   height = 750, color_discrete_sequence=px.colors.sequential.Agsunset)
     fig.update_traces(insidetextorientation='radial', texttemplate="%{label}<br>%{percentEntry:.2%}",
                  hovertemplate="<br>".join([
-                        "DDC-Sachgruppe: %{label:.10s}",
+                        "DDC-Sachgruppe: %{label}",
                         "Anzahl: %{customdata[1]}",
                         "Anteil: %{percentEntry:.2%}",   
                         "DDC-Hauptklasse: %{customdata[2]} - %{customdata[0]}"]),
