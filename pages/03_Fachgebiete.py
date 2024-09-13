@@ -667,7 +667,7 @@ elif subject == "900 - Geschichte und Geografie":
 
     df_000 = dissddc[dissddc["Parent_no"].astype(str).str.startswith('9')]
 
-    ------------
+    #------------
     # Function to insert line breaks in labels longer than 20 characters
     def insert_line_breaks(label, max_len=20):
         return "<br>".join([label[i:i + max_len] for i in range(0, len(label), max_len)])    
@@ -675,7 +675,7 @@ elif subject == "900 - Geschichte und Geografie":
     # Apply the function to your labels in the 'path'
     df_000['DDCsecond_title'] = df_000['DDCsecond_title'].apply(lambda x: insert_line_breaks(x, 20))
     df_000['Sachgebiet'] = df_000['Sachgebiet'].apply(lambda x: insert_line_breaks(x, 20))
-    -----------
+    #-----------
         
     fig = px.sunburst(df_000, path=['DDCsecond_title', 'Sachgebiet'], values='count', 
                   custom_data=['Parent_title', 'count', 'Parent_no'],
