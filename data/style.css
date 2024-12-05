@@ -7,7 +7,7 @@
 [data-testid="stSidebarHeader"]::after{
                 content: "DNBVIS_frodiss";
                 font-size: 25px;
-		top: 50px;
+		top: 150px;
                 }
 [data-testid="stSidebarNav"]::before{
                 content: "DNBVIS_frodiss";
