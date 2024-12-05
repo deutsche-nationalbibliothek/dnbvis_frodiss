@@ -10,16 +10,6 @@
 		top: 75px;
 		position: absolute;
                 }
-.st-emotion-cache-n8e7in{
-                max-height: 450px;
-                padding-top: 125px;
-                height: 400px;      
-}
-.st-emotion-cache-n8e7in{
-                max-height: 450px;
-                padding-top: 125px;
-                height: 400px;
-                }
 [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
                  gap: 0rem;
 				 max-height: 450px;
