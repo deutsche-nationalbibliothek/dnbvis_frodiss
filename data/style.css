@@ -4,11 +4,12 @@
                 background-repeat: no-repeat;
                 background-position: 25px 25px;
                 }
-[data-testid="stLogoSpacer"]{
-                height: 50px;
-                background-image: url(https://files.dnb.de/DFG-Viewer/DNB-Logo-Viewer.jpg);
-                background-repeat: no-repeat;
-                background-position: 25px 25px;
+[data-testid="stSidebarHeader"]::after{
+                content: "DNBVIS_frodiss";
+                font-size: 25px;
+                top: 90px;
+                margin-left: 25px;
+                position: relative;
                 }
 [data-testid="stSidebarNav"]::before{
                 content: "DNBVIS_frodiss";
