@@ -8,6 +8,7 @@
                 content: "DNBVIS_frodiss";
                 font-size: 25px;
 		top: 150px;
+		position: relative;
                 }
 [data-testid="stSidebarNav"]::before{
                 content: "DNBVIS_frodiss";
