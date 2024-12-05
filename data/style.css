@@ -13,9 +13,6 @@
 [data-testid="stSidebarNav"]{
                 height: 300px;
                 }
-.stSidebarNavSeperator{
-                height: 300px;
-                }
 [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
                 gap: 0rem;
 		max-height: 500px;
