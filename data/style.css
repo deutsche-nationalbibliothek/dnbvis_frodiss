@@ -10,13 +10,6 @@
 		top: 75px;
 		position: absolute;
                 }
-[data-testid="stSidebarNav"]::before{
-                content: "DNBVIS_frodiss";
-                font-size: 25px;
-                top: 90px;
-                margin-left: 25px;
-                position: relative;
-                }
 .st-emotion-cache-n8e7in{
                 max-height: 450px;
                 padding-top: 125px;
