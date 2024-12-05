@@ -14,8 +14,8 @@
                 height: 300px;
                 }
 [data-testid=stSidebar]:nth-of-type(1) [data-testid=stVerticalBlock]{
-                 gap: 0rem;
-				 max-height: 450px;
+                gap: 0rem;
+		max-height: 500px;
                 }
 [data-testid=stSidebar] [data-testid=stImage]{
                 text-align: center;
