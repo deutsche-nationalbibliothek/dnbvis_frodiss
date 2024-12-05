@@ -84,7 +84,7 @@ st.write("Die für diese Anwendung genutzten Skripte und JSON-Dateien sind auf [
 
 
 st.markdown(" #### Kontakt") 
-st.markdown(" Bei Fragen oder Anmerkungen wenden Sie sich bitte an Stephanie Palek: s.palek@dnb.de") 
+st.markdown(" Bei Fragen oder Anmerkungen wenden Sie sich bitte an Stephanie Nitsche: s.nitsche@dnb.de") 
     
 
     
