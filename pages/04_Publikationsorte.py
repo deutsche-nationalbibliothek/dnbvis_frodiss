@@ -30,7 +30,7 @@ local_css(style)
 
 
 # ---- SIDEBAR ----- 
-overview = pd.read_csv(overview, sep=';', encoding="utf-8")
+overview = pd.read_csv(overview, sep=',', encoding="utf-8")
 complete = int(overview['records_all'].values[-1])
 used =  int(overview['records_hss'].values[-1])   #301670
 timestamp = overview['timestamp'].values[-1]
@@ -112,3 +112,4 @@ st.markdown("Ausschlaggebend für die örtliche Zuordnung ist die Angabe des Pub
 st.markdown("Die Ortsangaben wurden anschließend bereinigt und vereinheitlicht. Die so entnommenen Ortsangaben wurden mit Hilfe der [lobid-reconciliation-API](https://lobid.org/gnd/reconcile) " 
             " zunächst mit der GND abgeglichen, um bspw. verschiedene Namensformen zu berücksichtigen. Über die SRU-Schnittstelle der DNB wurden zu den einzelnen "
             " Geografika dann die Koordinaten aus dem Normdatensatz abgerufen, um mit diesen schließlich die Kartendarstellung der Publikationsorte realisiert. ")
+
