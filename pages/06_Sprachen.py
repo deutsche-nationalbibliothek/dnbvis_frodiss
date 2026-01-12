@@ -30,7 +30,7 @@ local_css(style)
 
 
 # ---- SIDEBAR ----- 
-overview = pd.read_csv(overview, sep=';', encoding="utf-8")
+overview = pd.read_csv(overview, sep=',', encoding="utf-8")
 complete = int(overview['records_all'].values[-1])
 used =  int(overview['records_hss'].values[-1])   #301670
 timestamp = overview['timestamp'].values[-1]
