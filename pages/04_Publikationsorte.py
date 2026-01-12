@@ -60,10 +60,11 @@ st.write("Der Link wird im Anschluss unter der Karte angezeigt.")
 df_pub = pd.read_json("data/geoplaces.json", encoding="utf-8")
 df_pub = df_pub[df_pub['count'].notna()]
 
-pub_loc = df_pub["Place"].astype(str)
-pub_loc = df_pub["lat"].astype(float)
-pub_loc = df_pub["long"].astype(float)
+pub_loc = df_pub.copy()
+pub_loc["Place"] = pub_loc["Place"].astype(str)
 pub_loc = pub_loc.str.replace(" ","%20")
+pub_loc["lat"] = pub_loc["lat"].astype(float)
+pub_loc["long"] = pub_loc["long"].astype(float)
 df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+pub_loc
     
     
@@ -115,6 +116,7 @@ st.markdown("Ausschlaggebend für die örtliche Zuordnung ist die Angabe des Pub
 st.markdown("Die Ortsangaben wurden anschließend bereinigt und vereinheitlicht. Die so entnommenen Ortsangaben wurden mit Hilfe der [lobid-reconciliation-API](https://lobid.org/gnd/reconcile) " 
             " zunächst mit der GND abgeglichen, um bspw. verschiedene Namensformen zu berücksichtigen. Über die SRU-Schnittstelle der DNB wurden zu den einzelnen "
             " Geografika dann die Koordinaten aus dem Normdatensatz abgerufen, um mit diesen schließlich die Kartendarstellung der Publikationsorte realisiert. ")
+
 
 
 
