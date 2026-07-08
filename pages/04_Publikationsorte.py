@@ -97,6 +97,7 @@ if indices:
         select = indices[0]
         st.write(select)
         display_df = df_pub.iloc[select]
+        st.df(display_df)
         place = display_df.iloc['place']
         link1 = display_df.iloc['url']
         st.write(place)
