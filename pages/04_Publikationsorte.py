@@ -94,7 +94,7 @@ selected_point = st.plotly_chart(fig3, on_select="rerun", use_container_width=Tr
 indices = selected_point['selection']['point_indices']
 
 if indices:
-        select = indices[0]
+        select = indices
         place = df_pub.iloc[select]['place']
         link1 = df_pub.iloc[select]['url']
         st.write(place)
