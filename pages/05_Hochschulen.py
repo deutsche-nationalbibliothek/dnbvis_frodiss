@@ -57,6 +57,9 @@ st.write("Klicken Sie auf eine Hochschule, um einen Link zu den Titeln im Katalo
 st.write("Der Link wird im Anschluss unter der Karte angezeigt.")
 
 df_uni = pd.read_json(unidata, encoding="utf-8")
+df_uni["lat"] = pd.to_numeric(df_uni["lat"].str.replace(",", "."))
+df_uni["long"] = pd.to_numeric(df_uni["long"].str.replace(",", "."))
+
 uni_loc = df_uni["Hochschule"].astype(str)
 uni_loc = uni_loc.str.replace(" ","%20")
 df_uni["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+uni_loc
