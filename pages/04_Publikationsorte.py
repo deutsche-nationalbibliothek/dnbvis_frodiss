@@ -94,9 +94,11 @@ selected_point = st.plotly_chart(fig3, on_select="rerun", use_container_width=Tr
 select = selected_point['selection']['point_indices']
 
 if select:
-        st.write(location)
+        place = df_pub.iloc[select]['place']
         link1 = df_pub.iloc[select]['url']
-        st.info(f"Zu den im Set enthaltenen Publikationen aus [{location}](%s)" % link1)
+        st.write(place)
+        st.write(link1)
+        st.info(f"Zu den im Set enthaltenen Publikationen aus [{place}](%s)" % link1)
 else:
         st.write(" ")
         
