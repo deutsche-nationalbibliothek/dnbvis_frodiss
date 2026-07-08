@@ -92,6 +92,7 @@ fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 select=1000
 selected_point = st.plotly_chart(fig3, on_select="rerun", use_container_width=True)
 select = selected_point['selection']['point_indices']
+st.write(select)
 
 if select != None:
         if select != 1000:
