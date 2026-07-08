@@ -62,11 +62,11 @@ df_pub = df_pub[df_pub['count'].notna()]
 
 pub_loc = df_pub.copy()
 pub_loc["Place"] = pub_loc["Place"].astype(str)
-#pub_loc = pub_loc.str.replace(" ","%20")
 pub_loc["lat"] = pub_loc["lat"].astype(float)
 pub_loc["long"] = pub_loc["long"].astype(float)
-df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+pub_loc["Place"]
-    
+location = pub_loc["Place"].str.replace(" ","%20")
+df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+location
+
     
 fig3 = px.scatter_map(df_pub, lat="lat", lon="long", hover_name="Place",
                         size="count", color="count", color_continuous_scale=px.colors.cyclical.IceFire, zoom=5, #height=500,
