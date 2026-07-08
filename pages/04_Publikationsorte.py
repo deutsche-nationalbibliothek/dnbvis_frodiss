@@ -102,6 +102,8 @@ if select != None:
                 st.info(f"Zu den im Set enthaltenen Publikationen aus [{place}](%s)" % link1)
         else:
                 st.write(" ")
+else:
+        st.write(" ")
         
         
 st.write(" ")
