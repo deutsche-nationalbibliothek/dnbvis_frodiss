@@ -96,9 +96,9 @@ indices = selected_point['selection']['point_indices']
 if indices:
         select = indices[0]
         st.write(select)
-        st.write(df_pub.iloc[select])
-        place = df_pub.iloc[select]['place']
-        link1 = df_pub.iloc[select]['url']
+        display_df = df_pub.iloc[select]
+        place = display_df.['place']
+        link1 = display_df.['url']
         st.write(place)
         st.write(link1)
         st.info(f"Zu den im Set enthaltenen Publikationen aus [{place}](%s)" % link1)
