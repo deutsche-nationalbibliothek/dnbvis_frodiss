@@ -95,7 +95,7 @@ select = selected_point['selection']['point_indices']
 st.write(selected_point)
 st.write(select)
 
-if select != None:
+if select:
         if select != 1000:
                 place = df_pub.iloc[select]['Place']
                 link1 = df_pub.iloc[select]['url']
