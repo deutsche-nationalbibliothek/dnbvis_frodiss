@@ -59,11 +59,10 @@ st.write("Der Link wird im Anschluss unter der Karte angezeigt.")
 
 df_pub = pd.read_json("data/geoplaces.json", encoding="utf-8")
 df_pub = df_pub[df_pub['count'].notna()]
+df_pub["lat"] = pd.to_numeric(df_pub["lat"].str.replace(",", "."))
+df_pub["long"] = pd.to_numeric(df_pub["long"].str.replace(",", "."))
 
 pub_loc = df_pub.copy()
-pub_loc["Place"] = pub_loc["Place"].astype(str)
-pub_loc["lat"] = pd.to_numeric(df_pub["lat"].str.replace(",", "."))
-pub_loc["long"] = pd.to_numeric(df_pub["long"].str.replace(",", "."))
 location = pub_loc["Place"].str.replace(" ","%20")
 df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+location
 
