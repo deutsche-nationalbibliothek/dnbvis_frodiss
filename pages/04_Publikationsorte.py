@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
-from streamlit_plotly_events import plotly_events
+#from streamlit_plotly_events import plotly_events
 import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -68,7 +68,7 @@ pub_loc["long"] = pub_loc["long"].astype(float)
 df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+pub_loc
     
     
-fig3 = px.scatter_mapbox(df_pub, lat="lat", lon="long", hover_name="Place",
+fig3 = px.scatter_map(df_pub, lat="lat", lon="long", hover_name="Place",
                         size="count", color="count", color_continuous_scale=px.colors.cyclical.IceFire, zoom=5, #height=500,
                         labels={
                                         "count": "Anzahl",
@@ -76,9 +76,8 @@ fig3 = px.scatter_mapbox(df_pub, lat="lat", lon="long", hover_name="Place",
                                         "lon":"Longitude"
                                              }
                         )
-fig3.update_layout(mapbox_style="open-street-map", 
-                      mapbox=dict(
-                            #accesstoken=mapbox_access_token,
+fig3.update_layout(map_style="open-street-map", 
+                      map=dict(
                             bearing=0,
                             center=dict(
                                     lat=51.10,
@@ -92,11 +91,10 @@ fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 #st.plotly_chart(fig3, use_container_width=True)
 
 select=1000
-selected_points = plotly_events(fig3)
+selected_point = st.plotly_chart(fig3, on_select="rerun", use_container_width=True)
 
-if selected_points: 
-        a=selected_points[0]
-        select = a['pointNumber']  
+if selected_point: 
+        select = selected_point['selection']['points'][0]['point_index']
 
 if select != 1000:
         place = df_pub.iloc[select]['Place']
