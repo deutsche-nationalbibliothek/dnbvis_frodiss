@@ -61,13 +61,11 @@ df_pub = pd.read_json("data/geoplaces.json", encoding="utf-8")
 df_pub = df_pub[df_pub['count'].notna()]
 
 pub_loc = df_pub.copy()
-st.write(pub_loc)
 pub_loc["Place"] = pub_loc["Place"].astype(str)
 #pub_loc = pub_loc.str.replace(" ","%20")
 pub_loc["lat"] = pub_loc["lat"].astype(float)
 pub_loc["long"] = pub_loc["long"].astype(float)
-url_loc = pub_loc.astype(string)
-df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+url_loc
+df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+pub_loc["Place"]
     
     
 fig3 = px.scatter_map(df_pub, lat="lat", lon="long", hover_name="Place",
