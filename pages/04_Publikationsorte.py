@@ -92,12 +92,10 @@ fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 select=1000
 selected_point = st.plotly_chart(fig3, on_select="rerun", use_container_width=True)
 indices = selected_point['selection']['point_indices']
-st.write(indices)
 
 if indices:
         select = indices[0]
         st.write(select)
-        st.write(df_pub)
         st.write(df_pub.iloc[select])
         place = df_pub.iloc[select]['place']
         link1 = df_pub.iloc[select]['url']
