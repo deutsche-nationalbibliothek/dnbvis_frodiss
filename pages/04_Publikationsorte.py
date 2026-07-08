@@ -62,8 +62,8 @@ df_pub = df_pub[df_pub['count'].notna()]
 
 pub_loc = df_pub.copy()
 pub_loc["Place"] = pub_loc["Place"].astype(str)
-#pub_loc["lat"] = pub_loc["lat"].astype(float)
-#pub_loc["long"] = pub_loc["long"].astype(float)
+pub_loc["lat"] = pd.to_numeric(df_pub["lat"])
+pub_loc["long"] = pd.to_numeric(df_pub["long"])
 location = pub_loc["Place"].str.replace(" ","%20")
 df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+location
 
