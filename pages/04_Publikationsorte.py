@@ -95,7 +95,8 @@ indices = selected_point['selection']['point_indices']
 st.write(indices)
 
 if indices:
-        select = indices
+        select = indices[0]
+        st.write(select)
         place = df_pub.iloc[select]['place']
         link1 = df_pub.iloc[select]['url']
         st.write(place)
