@@ -91,16 +91,16 @@ fig3.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 
 select=1000
 selected_point = st.plotly_chart(fig3, on_select="rerun", use_container_width=True)
+select = selected_point['selection']['point_indices']
 
-if selected_point: 
-        select = selected_point['selection']['points'][0]['point_index']
-
-if select != 1000:
+if select != None:
+        if select != 1000:
         place = df_pub.iloc[select]['Place']
         link1 = df_pub.iloc[select]['url']
         st.info(f"Zu den im Set enthaltenen Publikationen aus [{place}](%s)" % link1)
 else:
         st.write(" ")
+        
         
 st.write(" ")
 st.write(" ") 
