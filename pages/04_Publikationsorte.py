@@ -65,7 +65,8 @@ pub_loc["Place"] = pub_loc["Place"].astype(str)
 #pub_loc = pub_loc.str.replace(" ","%20")
 pub_loc["lat"] = pub_loc["lat"].astype(float)
 pub_loc["long"] = pub_loc["long"].astype(float)
-df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+pub_loc
+url_loc = str(pub_loc)
+df_pub["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+url_loc
     
     
 fig3 = px.scatter_map(df_pub, lat="lat", lon="long", hover_name="Place",
