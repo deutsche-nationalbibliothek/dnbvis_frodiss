@@ -57,7 +57,7 @@ st.write("Klicken Sie auf eine Hochschule, um einen Link zu den Titeln im Katalo
 st.write("Der Link wird im Anschluss unter der Karte angezeigt.")
 
 df_uni = pd.read_json(unidata, encoding="utf-8")
-st.write(df_uni)
+#st.write(df_uni)
 df_uni = df_uni[df_uni['count'].notna()]
 df_uni["lat"] = pd.to_numeric(df_uni["lat"], errors="coerce")
 df_uni["long"] = pd.to_numeric(df_uni["long"], errors="coerce")
