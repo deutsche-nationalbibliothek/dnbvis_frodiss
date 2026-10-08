@@ -59,7 +59,6 @@ main_lang = main_lang.groupby('name')['counts'].sum().reset_index()
 
 other_lang = stats.copy()
 other_lang = other_lang[other_lang.counts < 500]
-st.dataframe(other_lang)
 
 st.subheader("Übersicht Sprachen") 
 
@@ -72,6 +71,7 @@ fig_s1 = px.pie(main_lang, values='counts', labels='name', names='name', height=
 fig_s1.update_traces(textinfo='label+percent', hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}", textfont_size=20)
 st.plotly_chart(fig_s1, use_container_width=True)
 
+st.dataframe(other_lang)
 #selected_points = plotly_events(fig_s1)
 #a=selected_points[0]
 #selection = a['pointNumber']
