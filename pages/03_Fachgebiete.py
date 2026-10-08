@@ -410,7 +410,7 @@ elif subject == "Alle Fachgebiete":
         print(select)
     else:
         select = 0
-st.write(fig_all.data[0].y)  
+    st.write(fig_all.data[0].y)  
             
 #--------------------------
         
