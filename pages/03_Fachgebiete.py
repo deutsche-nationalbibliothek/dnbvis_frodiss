@@ -384,8 +384,6 @@ if subject == "Übersicht":
 elif subject == "Alle Fachgebiete":    
         
     st.write("Visuelle Darstellung der Verteilung auf die 10 DDC-Hauptklassen:")        
-    st.dataframe(overview_ddc) 
-    st.write(overview_ddc['Anzahl'].dtype)
         
     fig_all = px.bar(overview_ddc, x='DDC', y='Anzahl',         
                 color='DDC',
@@ -412,7 +410,7 @@ elif subject == "Alle Fachgebiete":
         print(select)
     else:
         select = 0
-
+st.write(fig_all.data[0].y)  
             
 #--------------------------
         
