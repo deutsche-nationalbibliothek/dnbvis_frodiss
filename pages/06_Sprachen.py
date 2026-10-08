@@ -59,6 +59,7 @@ main_lang = main_lang.groupby('name')['counts'].sum().reset_index()
 
 other_lang = stats.copy()
 other_lang = other_lang[other_lang.counts < 500]
+st.dataframe(other_lang)
 
 st.subheader("Übersicht Sprachen") 
 
