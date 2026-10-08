@@ -57,7 +57,6 @@ main_lang = stats.copy()
 main_lang.loc[main_lang['counts'] < 500, 'name'] = 'Andere Sprachen'  
 main_lang.loc[main_lang['lang'].str.len() > 3, 'name'] = 'Mehrere Sprachencodes' 
 main_lang = main_lang.groupby('name')['counts'].sum().reset_index()
-st.dataframe(main_lang)
 
 other_lang = stats.copy()
 other_lang = other_lang[other_lang.counts < 500]
@@ -73,12 +72,12 @@ fig_s1 = px.pie(main_lang, values='counts', labels='name', names='name', height=
 fig_s1.update_traces(textinfo='label+percent', hovertemplate = "Sprache: %{label} <br>Anzahl: %{value} <br>Anteil: %{percent}", textfont_size=20)
 st.plotly_chart(fig_s1, use_container_width=True)
 
-st.dataframe(stats)
-st.dataframe(main_lang)
-st.dataframe(other_lang)
-#selected_points = plotly_events(fig_s1)
-#a=selected_points[0]
-#selection = a['pointNumber']
+
+
+# 1. Einträge entfernen, die mit "ger" oder "eng" beginnen:
+other_lang = other_lang[~other_lang['lang'].str.startswith(('ger', 'eng'))]
+# 2. Bei allen übrigen Einträgen nur die ersten 3 Zeichen behalten:
+other_lang['lang'] = other_lang['lang'].str[:3]
 
 st.write('In dieser zweiten Darstellung wird das Verhältnis "Anderer Sprachen" zueinander visualisiert: ')
 st.info('Durch Klicken auf einzelne Sprachen in der Legende können diese aus der Darstellung ausgeschlossen werden.')
