@@ -408,15 +408,7 @@ elif subject == "Alle Fachgebiete":
         select = overview_ddc.iloc[selected['selection']['point_indices'][0]]['DDC']
     else:
         select = 0
-    
-    #selected_points = plotly_events(fig_all)
-    #if selected_points:
-    #    a=selected_points[0]
-    #    select = a['x']
-    #    print(select)
-    #else:
-    #    select = 0
-    #st.write(fig_all.data[0].y)  
+
             
 #--------------------------
         
