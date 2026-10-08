@@ -79,8 +79,8 @@ other_lang = other_lang[~other_lang['lang'].str.startswith(('ger', 'eng'))]
 # 2. Bei allen übrigen Einträgen nur die ersten 3 Zeichen behalten:
 other_lang['lang'] = other_lang['lang'].str[:3]
 other_lang = other_lang.groupby('lang', as_index=False).agg(
-    count=('count', 'sum'),
-    name=('name', 'first')   # nimmt den ersten nicht-leeren Namen, hier "Französisch"
+    count=('counts', 'sum'),
+    name=('name', 'first') 
 )
 st.dataframe(other_lang)
 
