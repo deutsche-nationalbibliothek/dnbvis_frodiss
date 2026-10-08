@@ -77,18 +77,18 @@ fig4 = px.scatter_map(df_uni, lat="lat", lon="long", hover_name="Hochschule",
                                         "lon":"Longitude"
                                              }
                         )
-fig4.update_layout(
-    map=dict(
-        style="open-street-map",
-        bearing=0,
-        center=dict(lat=51.10, lon=10.27),
-        zoom=5,          # <- zoom hierher, nicht nur bei px
-    ),
-    margin={"r": 0, "t": 0, "l": 0, "b": 0},
-    clickmode="event+select",
-)
-#fig4.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-#fig4.update_traces(marker_sizemin = 5, marker_sizeref = 10)
+fig4.update_layout(map_style="open-street-map", 
+                      map=dict(
+                            #accesstoken=mapbox_access_token,
+                            bearing=0,
+                            center=dict(
+                                    lat=51.10,
+                                    lon=10.27
+                                            )),
+                   clickmode='event+select'
+                        )  
+fig4.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+fig4.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 st.plotly_chart(fig4, use_container_width=True)
 
 selected_point = st.plotly_chart(fig4, on_select="rerun", width=True)
