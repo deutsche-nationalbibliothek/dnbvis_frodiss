@@ -59,8 +59,10 @@ st.write("Der Link wird im Anschluss unter der Karte angezeigt.")
 df_uni = pd.read_json(unidata, encoding="utf-8")
 st.write(df_uni)
 df_uni = df_uni[df_uni['count'].notna()]
-df_uni["lat"] = pd.to_numeric(df_uni["lat"].str.replace(",", "."))
-df_uni["long"] = pd.to_numeric(df_uni["long"].str.replace(",", "."))
+df_uni["lat"] = pd.to_numeric(df_uni["lat"], errors="coerce")
+df_uni["long"] = pd.to_numeric(df_uni["long"], errors="coerce")
+#df_uni["lat"] = pd.to_numeric(df_uni["lat"].str.replace(",", "."))
+#df_uni["long"] = pd.to_numeric(df_uni["long"].str.replace(",", "."))
 
 uni_loc = df_uni["Hochschule"].astype(str)
 uni_loc = uni_loc.str.replace(" ","%20")
