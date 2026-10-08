@@ -55,7 +55,7 @@ stats = stats[(stats.name != "Ohne Sprache") & (stats.name != "Nicht zu entschei
 
 main_lang = stats.copy()
 main_lang.loc[main_lang['counts'] < 500, 'name'] = 'Andere Sprachen'  
-main_lang.loc[main_lang['lang'].str.len() > 3, 'count'].sum() = 'Mehrere Sprachencodes' 
+main_lang.loc[main_lang['lang'].str.len() > 3, 'name'] = 'Mehrere Sprachencodes' 
 main_lang = main_lang.groupby('name')['counts'].sum().reset_index()
 
 other_lang = stats.copy()
