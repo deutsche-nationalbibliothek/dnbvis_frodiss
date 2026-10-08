@@ -385,7 +385,7 @@ elif subject == "Alle Fachgebiete":
         
     st.write("Visuelle Darstellung der Verteilung auf die 10 DDC-Hauptklassen:")        
     st.dataframe(overview_ddc) 
-    st.write(type(overview_ddc['Anzahl'])
+    st.write(type(overview_ddc['Anzahl']))
         
     fig_all = px.bar(overview_ddc, x='DDC', y='Anzahl',         
                 color='DDC',
