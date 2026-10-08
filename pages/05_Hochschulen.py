@@ -69,7 +69,7 @@ uni_loc = uni_loc.str.replace(" ","%20")
 df_uni["url"] = "https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=catalog=dnb.hss+location=onlinefree+"+uni_loc
     
     
-fig4 = px.scatter_map(df_uni, lat="lat", lon="lon", hover_name="Hochschule",
+fig4 = px.scatter_map(df_uni, lat="lat", lon="long", hover_name="Hochschule",
                         size="count", color="count", color_continuous_scale=px.colors.cyclical.Phase, zoom=5, #height=500,
                         labels={
                                         "count": "Anzahl",
