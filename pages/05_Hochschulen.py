@@ -91,7 +91,7 @@ fig4.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig4.update_traces(marker_sizemin = 5, marker_sizeref = 10)
 #st.plotly_chart(fig4, use_container_width=True)
 
-selected_point = st.plotly_chart(fig3, on_select="rerun", width=True)
+selected_point = st.plotly_chart(fig4, on_select="rerun", width=True)
 indices = selected_point['selection']['point_indices']
 
 if indices:
