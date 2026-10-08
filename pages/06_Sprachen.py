@@ -82,7 +82,6 @@ other_lang = other_lang.groupby('lang', as_index=False).agg(
     counts=('counts', 'sum'),
     name=('name', 'first') 
 )
-st.dataframe(other_lang)
 
 st.write('In dieser zweiten Darstellung wird das Verhältnis "Anderer Sprachen" zueinander visualisiert: ')
 st.info('Durch Klicken auf einzelne Sprachen in der Legende können diese aus der Darstellung ausgeschlossen werden.')
