@@ -39,6 +39,7 @@ habil =  int(overview['habil'].values[-1])
 previous_habil = int(overview['habil'].values[-2])
 timestamp = overview['timestamp'].values[-1]
 update = overview['update'].values[-1]
+other = overview['other'].values[-1]
 
 with st.sidebar:
         
@@ -77,7 +78,7 @@ st.markdown("Informationen zur Datengrundlage: "
 st.write("Informationen zu den einzelnen Visualisierungen finden Sie unter den jeweiligen Darstellungen. "
          ' Weitere Informationen zur Anwendung finden Sie unter dem Menüpunkt "Über DNBVIS_frodiss". ')
 
-st.write(" Das Datenset wird alle 4 Monate aktualisiert. Entsprechend aktuell sind die gezeigten Auswertungen. ")
+st.write(" Das Datenset wird alle 6 Monate aktualisiert. Entsprechend aktuell sind die gezeigten Auswertungen. ")
           
 st.write("")
 
@@ -103,7 +104,7 @@ conv1_habil = conv_habil.replace(',', '.')
 conv_delta_habil = f'{delta_habil:,}'
 conv1_delta_habil = conv_delta_habil.replace(',', '.')
 
-other_current = 44
+other_current = int(other)
 other_112022 = 44
 other_062022 = 44
 other_previous = other_112022
