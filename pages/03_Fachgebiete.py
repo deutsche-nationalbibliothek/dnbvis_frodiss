@@ -90,8 +90,8 @@ overview_ddc = pd.DataFrame({'Anzahl': [pub_000,pub_100,pub_200,pub_300,pub_400,
 
 records_ddc = int(overview['records_hss'].values[-1] - overview['no_ddc'].values[-1]) 
 records_ddc = f'{records_ddc:,}'.replace(',', '.')
-ddc_missing_at_first = int(overview['ddc_missing_at_first'].values[-1])
-ddc_missing_at_first = f'{ddc_missing_at_first:,}'.replace(',', '.')
+#ddc_missing_at_first = int(overview['ddc_missing_at_first'].values[-1])
+#ddc_missing_at_first = f'{ddc_missing_at_first:,}'.replace(',', '.')
 missing = int(overview['no_ddc'].values[-1])
 conv_missing = f'{missing:,}'.replace(',', '.')
 
